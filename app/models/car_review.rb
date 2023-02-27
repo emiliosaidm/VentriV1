@@ -1,0 +1,2 @@
+class CarReview < ApplicationRecord
+end
