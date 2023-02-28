@@ -1,20 +1,33 @@
-<h2>Log in</h2>
+<!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container p-3">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    label: "Correo Electrónico",
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email", class: "input-design" }
+                     %>
+        <%= f.input :password,
+                    label: "Contraseña",
+                    required: false,
+                    input_html: { autocomplete: "current-password", class: "input-design"  } %>
+        <%= link_to "Olvidé mi contraseña",new_user_password_path, class: "link-design" %>
+        <%= f.input :remember_me, label: "Recordar mi cuenta",as: :boolean if devise_mapping.rememberable?%>
+      </div>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      <div class="form-actions d-flex w-100 flex-column align-items-center">
+        <%= f.button :submit, "Iniciar Sesión", class: "btn btn-main-dark w-100" %>
+        <br>
+        <div class="d-flex w-100 flex-column align-items-left">
+          <h3>¿No tienes cuenta?</h3>
+          <%= link_to "Registrarme", new_user_registration_path, class: "btn btn-main-dark w-100 mt-2" %>
+        </div>
+      </div>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <br>
+  <%= render "components_mobile/social_media_footer" %>
+</div>

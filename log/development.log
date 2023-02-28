@@ -167,3 +167,3086 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3807692464008009780)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/my_bookings" for ::1 at 2023-02-27 19:39:32 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/my_bookings"):
+  
+Started GET "/" for ::1 at 2023-02-27 19:39:37 -0600
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 109)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 819)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 3568.0ms | Allocations: 153276)
+Completed 200 OK in 3575ms (Views: 3569.4ms | ActiveRecord: 0.0ms | Allocations: 155706)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 19:39:47 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 669)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 50.7ms | Allocations: 18064)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 194)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 55.4ms | Allocations: 26654)
+Completed 200 OK in 79ms (Views: 57.3ms | ActiveRecord: 11.0ms | Allocations: 33778)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 19:39:50 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 11ms (ActiveRecord: 1.9ms | Allocations: 3707)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2444)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 130)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 10893)
+Completed 200 OK in 314ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 12562)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 19:39:54 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2082)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 194)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 10679)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 11903)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-02-27 19:39:56 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2961)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 193)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 11556)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 12836)
+
+
+Started POST "/users" for ::1 at 2023-02-27 19:39:58 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4992)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 13353)
+Completed 422 Unprocessable Entity in 29ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 15876)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 19:40:07 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2280)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 151)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 10641)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 11296)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:19:33 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3184)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3294)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 4.9ms | Allocations: 12472)
+
+
+  
+ActionView::Template::Error (Missing partial components_mobile/__header_logo with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/emiliosaid/code/emiliosaidm/VentriV1/app/views"
+  * "/Users/emiliosaid/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/devise-4.9.0/app/views"
+  * "/Users/emiliosaid/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4.2/app/views"
+  * "/Users/emiliosaid/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4.2/app/views"
+
+Did you mean?  components_mobile/header_logo
+               action_text/attachables/remote_image
+               action_text/attachment_galleries/attachment_gallery
+               active_storage/blobs/blob
+               action_text/contents/content
+               devise/shared/error_messages):
+    1: <!-- Mobile view -->
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/_header_logo" %>
+    4:   <h2>Log in</h2>
+    5: 
+    6:   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:20:00 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 671)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.4ms | Allocations: 11352)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 645)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 3438.7ms | Allocations: 122490)
+Completed 200 OK in 3443ms (Views: 3441.9ms | ActiveRecord: 0.0ms | Allocations: 123905)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:20:05 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 77)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 3425)
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:20:08 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 2337)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 557)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 5496.9ms | Allocations: 146470)
+Completed 200 OK in 5501ms (Views: 5499.6ms | ActiveRecord: 0.0ms | Allocations: 147812)
+
+
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3086.5ms | Allocations: 81965)
+Completed 200 OK in 3087ms (Views: 3086.7ms | ActiveRecord: 0.0ms | Allocations: 82717)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:20:55 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2344)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3203.8ms | Allocations: 75421)
+Completed 200 OK in 3205ms (Views: 3204.2ms | ActiveRecord: 0.0ms | Allocations: 76070)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:21:03 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2344)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 151)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 10752)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 11384)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:21:13 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 88)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3425)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 565)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 3059.7ms | Allocations: 77792)
+Completed 200 OK in 3066ms (Views: 3064.0ms | ActiveRecord: 0.0ms | Allocations: 79035)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:21:35 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2337)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3061.9ms | Allocations: 75427)
+Completed 200 OK in 3064ms (Views: 3062.7ms | ActiveRecord: 0.0ms | Allocations: 76156)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:22:17 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3422)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 12204)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 13474)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:23:15 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 88)
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3422)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 12216)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms | Allocations: 13573)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:24:14 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 88)
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.7ms | Allocations: 3422)
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:24:17 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2344)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 5539.9ms | Allocations: 150371)
+Completed 200 OK in 5544ms (Views: 5542.7ms | ActiveRecord: 0.0ms | Allocations: 151725)
+
+
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3148.1ms | Allocations: 83403)
+Completed 200 OK in 3149ms (Views: 3148.3ms | ActiveRecord: 0.0ms | Allocations: 84161)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:26:28 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2337)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3152.5ms | Allocations: 75227)
+Completed 200 OK in 3154ms (Views: 3153.0ms | Allocations: 75865)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:26:57 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3111.1ms | Allocations: 75213)
+Completed 200 OK in 3114ms (Views: 3111.7ms | Allocations: 75851)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:27:15 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2341)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3075.5ms | Allocations: 75228)
+Completed 200 OK in 3077ms (Views: 3075.8ms | Allocations: 75865)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:28:05 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3085.2ms | Allocations: 75213)
+Completed 200 OK in 3087ms (Views: 3085.9ms | Allocations: 75843)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:28:26 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 88)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3432)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 12228)
+Completed 200 OK in 17ms (Views: 15.6ms | Allocations: 13485)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:28:26 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 10530)
+Completed 200 OK in 13ms (Views: 11.8ms | Allocations: 11263)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:28:30 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 10531)
+Completed 200 OK in 20ms (Views: 18.2ms | Allocations: 11175)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:28:45 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 88)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3422)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 12216)
+Completed 200 OK in 13ms (Views: 11.7ms | Allocations: 13452)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:28:58 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 88)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3422)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 12216)
+Completed 200 OK in 14ms (Views: 13.5ms | Allocations: 13563)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:28:58 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 10530)
+Completed 200 OK in 15ms (Views: 14.2ms | Allocations: 11263)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:29:01 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3421)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 12215)
+Completed 200 OK in 16ms (Views: 14.9ms | Allocations: 13457)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:29:01 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 10530)
+Completed 200 OK in 18ms (Views: 16.9ms | Allocations: 11251)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:29:06 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 88)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3422)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 12216)
+Completed 200 OK in 17ms (Views: 16.1ms | Allocations: 13467)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:29:21 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3182.4ms | Allocations: 75431)
+Completed 200 OK in 3185ms (Views: 3183.2ms | Allocations: 76164)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:29:36 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2344)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3057.6ms | Allocations: 75232)
+Completed 200 OK in 3059ms (Views: 3058.1ms | Allocations: 75863)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:29:49 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2337)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3061.5ms | Allocations: 75294)
+Completed 200 OK in 3062ms (Views: 3061.8ms | Allocations: 75927)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:30:49 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3075.2ms | Allocations: 75219)
+Completed 200 OK in 3077ms (Views: 3075.6ms | Allocations: 75845)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:30:53 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2337)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 10777)
+Completed 200 OK in 18ms (Views: 16.2ms | Allocations: 11404)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:31:02 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3083.3ms | Allocations: 75221)
+Completed 200 OK in 3086ms (Views: 3084.0ms | Allocations: 75853)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:31:05 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 10770)
+Completed 200 OK in 11ms (Views: 9.6ms | Allocations: 11402)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:31:16 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3107.7ms | Allocations: 75218)
+Completed 200 OK in 3109ms (Views: 3108.2ms | Allocations: 75865)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:31:26 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2344)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3075.5ms | Allocations: 75233)
+Completed 200 OK in 3077ms (Views: 3076.2ms | Allocations: 75870)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:33:37 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2344)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3171.2ms | Allocations: 75237)
+Completed 200 OK in 3173ms (Views: 3171.8ms | Allocations: 75868)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:37:05 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.6ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3429)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 12223)
+Completed 200 OK in 21ms (Views: 19.7ms | Allocations: 13468)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:39:39 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1328)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1417)
+Completed 500 Internal Server Error in 6ms (Allocations: 2766)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container m-3">
+     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }
+                  class: "input-design" %>
+      <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Log in" %>
+    </div>
+  <% end %></div>
+
+  <%= render "devise/shared/links" %>
+</div>
+
+):
+1:    <!-- Mobile view -->
+2:    <div class = "show-on-mobile-login">
+3:      <%= render "components_mobile/header_logo" %>
+4:        <div class="container m-3">
+5:         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+6:        <div class="form-inputs">
+7:          <%= f.input :email,
+8:                      required: false,
+9:                      autofocus: true,
+10:                      input_html: { autocomplete: "email" }
+11:                      class: "input-design" %>
+12:          <%= f.input :password,
+13:                      required: false,
+14:                      input_html: { autocomplete: "current-password" } %>
+15:          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+16:        </div>
+17:    
+18:        <div class="form-actions">
+19:          <%= f.button :submit, "Log in" %>
+20:        </div>
+21:      <% end %></div>
+22:    
+23:      <%= render "devise/shared/links" %>
+24:    </div>
+  
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ':'
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ':'
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ':'
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ':'
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ':'
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ':'
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:39:53 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3444)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 12239)
+Completed 200 OK in 19ms (Views: 17.7ms | Allocations: 13618)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:40:42 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3432)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 12226)
+Completed 200 OK in 18ms (Views: 16.3ms | Allocations: 13575)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:40:49 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3427)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 12221)
+Completed 200 OK in 19ms (Views: 17.8ms | Allocations: 13573)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:43:16 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1316)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1405)
+Completed 500 Internal Server Error in 6ms (Allocations: 2726)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container p-4">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" },
+                    class: "input-design" %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, "Recuerdame" %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Log in" %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render "devise/shared/links" %>
+</div>
+
+):
+1:    <!-- Mobile view -->
+2:    <div class = "show-on-mobile-login">
+3:      <%= render "components_mobile/header_logo" %>
+4:        <div class="container p-4">
+5:          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+6:          <div class="form-inputs">
+7:            <%= f.input :email,
+8:                        required: false,
+9:                        autofocus: true,
+10:                        input_html: { autocomplete: "email" },
+11:                        class: "input-design" %>
+12:            <%= f.input :password,
+13:                        required: false,
+14:                        input_html: { autocomplete: "current-password" } %>
+15:            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, "Recuerdame" %>
+16:          </div>
+17:    
+18:          <div class="form-actions">
+19:            <%= f.button :submit, "Log in" %>
+20:          </div>
+21:        <% end %>
+22:      </div>
+23:    
+24:      <%= render "devise/shared/links" %>
+25:    </div>
+  
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:43:17 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1271)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1351)
+Completed 500 Internal Server Error in 1ms (Allocations: 2071)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container p-4">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" },
+                    class: "input-design" %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, "Recuerdame" %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Log in" %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render "devise/shared/links" %>
+</div>
+
+):
+1:    <!-- Mobile view -->
+2:    <div class = "show-on-mobile-login">
+3:      <%= render "components_mobile/header_logo" %>
+4:        <div class="container p-4">
+5:          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+6:          <div class="form-inputs">
+7:            <%= f.input :email,
+8:                        required: false,
+9:                        autofocus: true,
+10:                        input_html: { autocomplete: "email" },
+11:                        class: "input-design" %>
+12:            <%= f.input :password,
+13:                        required: false,
+14:                        input_html: { autocomplete: "current-password" } %>
+15:            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, "Recuerdame" %>
+16:          </div>
+17:    
+18:          <div class="form-actions">
+19:            <%= f.button :submit, "Log in" %>
+20:          </div>
+21:        <% end %>
+22:      </div>
+23:    
+24:      <%= render "devise/shared/links" %>
+25:    </div>
+  
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:43:33 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1316)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1405)
+Completed 500 Internal Server Error in 5ms (Allocations: 2627)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container p-4">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" },
+                    class: "input-design" %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, label: "recuerdame"%>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Log in" %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render "devise/shared/links" %>
+</div>
+
+):
+1:    <!-- Mobile view -->
+2:    <div class = "show-on-mobile-login">
+3:      <%= render "components_mobile/header_logo" %>
+4:        <div class="container p-4">
+5:          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+6:          <div class="form-inputs">
+7:            <%= f.input :email,
+8:                        required: false,
+9:                        autofocus: true,
+10:                        input_html: { autocomplete: "email" },
+11:                        class: "input-design" %>
+12:            <%= f.input :password,
+13:                        required: false,
+14:                        input_html: { autocomplete: "current-password" } %>
+15:            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, label: "recuerdame"%>
+16:          </div>
+17:    
+18:          <div class="form-actions">
+19:            <%= f.button :submit, "Log in" %>
+20:          </div>
+21:        <% end %>
+22:      </div>
+23:    
+24:      <%= render "devise/shared/links" %>
+25:    </div>
+  
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:43:34 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1271)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1351)
+Completed 500 Internal Server Error in 1ms (Allocations: 2071)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container p-4">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" },
+                    class: "input-design" %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, label: "recuerdame"%>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Log in" %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render "devise/shared/links" %>
+</div>
+
+):
+1:    <!-- Mobile view -->
+2:    <div class = "show-on-mobile-login">
+3:      <%= render "components_mobile/header_logo" %>
+4:        <div class="container p-4">
+5:          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+6:          <div class="form-inputs">
+7:            <%= f.input :email,
+8:                        required: false,
+9:                        autofocus: true,
+10:                        input_html: { autocomplete: "email" },
+11:                        class: "input-design" %>
+12:            <%= f.input :password,
+13:                        required: false,
+14:                        input_html: { autocomplete: "current-password" } %>
+15:            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, label: "recuerdame"%>
+16:          </div>
+17:    
+18:          <div class="form-actions">
+19:            <%= f.button :submit, "Log in" %>
+20:          </div>
+21:        <% end %>
+22:      </div>
+23:    
+24:      <%= render "devise/shared/links" %>
+25:    </div>
+  
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:43:35 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1273)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1353)
+Completed 500 Internal Server Error in 2ms (Allocations: 1965)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container p-4">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" },
+                    class: "input-design" %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, label: "recuerdame"%>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Log in" %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render "devise/shared/links" %>
+</div>
+
+):
+1:    <!-- Mobile view -->
+2:    <div class = "show-on-mobile-login">
+3:      <%= render "components_mobile/header_logo" %>
+4:        <div class="container p-4">
+5:          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+6:          <div class="form-inputs">
+7:            <%= f.input :email,
+8:                        required: false,
+9:                        autofocus: true,
+10:                        input_html: { autocomplete: "email" },
+11:                        class: "input-design" %>
+12:            <%= f.input :password,
+13:                        required: false,
+14:                        input_html: { autocomplete: "current-password" } %>
+15:            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, label: "recuerdame"%>
+16:          </div>
+17:    
+18:          <div class="form-actions">
+19:            <%= f.button :submit, "Log in" %>
+20:          </div>
+21:        <% end %>
+22:      </div>
+23:    
+24:      <%= render "devise/shared/links" %>
+25:    </div>
+  
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:43:37 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1316)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1405)
+Completed 500 Internal Server Error in 5ms (Allocations: 2627)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container p-4">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" },
+                    class: "input-design" %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, label: "recuerdame"%>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Log in" %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render "devise/shared/links" %>
+</div>
+
+):
+1:    <!-- Mobile view -->
+2:    <div class = "show-on-mobile-login">
+3:      <%= render "components_mobile/header_logo" %>
+4:        <div class="container p-4">
+5:          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+6:          <div class="form-inputs">
+7:            <%= f.input :email,
+8:                        required: false,
+9:                        autofocus: true,
+10:                        input_html: { autocomplete: "email" },
+11:                        class: "input-design" %>
+12:            <%= f.input :password,
+13:                        required: false,
+14:                        input_html: { autocomplete: "current-password" } %>
+15:            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?, label: "recuerdame"%>
+16:          </div>
+17:    
+18:          <div class="form-actions">
+19:            <%= f.button :submit, "Log in" %>
+20:          </div>
+21:        <% end %>
+22:      </div>
+23:    
+24:      <%= render "devise/shared/links" %>
+25:    </div>
+  
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:15: syntax error, unexpected ',', expecting ')'
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:44:04 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2978)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 3063)
+Completed 500 Internal Server Error in 5ms (Allocations: 4394)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    12:         <%= f.input :password,
+    13:                     required: false,
+    14:                     input_html: { autocomplete: "current-password" } %>
+    15:         <%= f.input :remember_me, "Recuerdame", as: :boolean if devise_mapping.rememberable?%>
+    16:       </div>
+    17: 
+    18:       <div class="form-actions">
+  
+app/views/devise/sessions/new.html.erb:15
+app/views/devise/sessions/new.html.erb:5
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:44:24 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3440)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 12296)
+Completed 200 OK in 24ms (Views: 22.5ms | Allocations: 13650)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:46:34 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1312)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1401)
+Completed 500 Internal Server Error in 4ms (Allocations: 2713)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container p-4">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" },
+                     %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?%>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Log in" %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render "devise/shared/links" %>
+</div>
+
+):
+1:    <!-- Mobile view -->
+2:    <div class = "show-on-mobile-login">
+3:      <%= render "components_mobile/header_logo" %>
+4:        <div class="container p-4">
+5:          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+6:          <div class="form-inputs">
+7:            <%= f.input :email,
+8:                        required: false,
+9:                        autofocus: true,
+10:                        input_html: { autocomplete: "email" },
+11:                         %>
+12:            <%= f.input :password,
+13:                        required: false,
+14:                        input_html: { autocomplete: "current-password" } %>
+15:            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?%>
+16:          </div>
+17:    
+18:          <div class="form-actions">
+19:            <%= f.button :submit, "Log in" %>
+20:          </div>
+21:        <% end %>
+22:      </div>
+23:    
+24:      <%= render "devise/shared/links" %>
+25:    </div>
+  
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:28: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:28: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:28: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:28: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:28: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:11: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:28: syntax error, unexpected `end', expecting ')'
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:46:45 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3437)
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:46:48 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2330)
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:46:51 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 2344)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 210)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 18239)
+  Rendered layout layouts/application.html.erb (Duration: 5488.7ms | Allocations: 163132)
+Completed 200 OK in 36ms (Views: 34.8ms | Allocations: 18913)
+
+
+Completed 200 OK in 5492ms (Views: 5490.8ms | Allocations: 164539)
+
+
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3128.5ms | Allocations: 105184)
+Completed 200 OK in 3129ms (Views: 3128.7ms | Allocations: 105917)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:49:43 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3104.4ms | Allocations: 75233)
+Completed 200 OK in 3106ms (Views: 3104.9ms | Allocations: 75853)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:50:36 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2344)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3063.3ms | Allocations: 75240)
+Completed 200 OK in 3065ms (Views: 3063.7ms | Allocations: 75874)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:51:02 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2330)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3126.0ms | Allocations: 75230)
+Completed 200 OK in 3128ms (Views: 3126.5ms | Allocations: 75883)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:52:25 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 3320)
+  Rendered shared/_flashes.html.erb (Duration: 0.9ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 12114)
+Completed 200 OK in 25ms (Views: 23.8ms | Allocations: 13370)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:52:27 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2201)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 10401)
+Completed 200 OK in 16ms (Views: 14.3ms | Allocations: 11143)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:52:37 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3165)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 11959)
+Completed 200 OK in 15ms (Views: 13.8ms | Allocations: 13222)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:52:53 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3161)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 11955)
+Completed 200 OK in 16ms (Views: 15.1ms | Allocations: 13301)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:53:09 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3019)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 11813)
+Completed 200 OK in 12ms (Views: 10.6ms | Allocations: 13156)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:53:34 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3026)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 11819)
+Completed 200 OK in 16ms (Views: 15.1ms | Allocations: 13168)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:53:36 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1932)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 10132)
+Completed 200 OK in 14ms (Views: 13.3ms | Allocations: 10853)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:53:44 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3026)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 11819)
+Completed 200 OK in 15ms (Views: 14.1ms | Allocations: 13067)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:53:58 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2392)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 11189)
+Completed 200 OK in 19ms (Views: 18.2ms | Allocations: 12536)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:55:36 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1752)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3158.3ms | Allocations: 74861)
+Completed 200 OK in 3160ms (Views: 3158.8ms | Allocations: 75594)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:55:48 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1745)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3067.1ms | Allocations: 74646)
+Completed 200 OK in 3068ms (Views: 3067.6ms | Allocations: 75278)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:56:01 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1759)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3071.4ms | Allocations: 74657)
+Completed 200 OK in 3073ms (Views: 3072.0ms | Allocations: 75306)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:56:26 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.7ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2400)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 11193)
+Completed 200 OK in 17ms (Views: 15.6ms | Allocations: 12443)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:56:59 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1745)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3059.9ms | Allocations: 74858)
+Completed 200 OK in 3062ms (Views: 3060.4ms | Allocations: 75594)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:57:11 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1745)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3085.5ms | Allocations: 74650)
+Completed 200 OK in 3087ms (Views: 3086.0ms | Allocations: 75294)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:57:22 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1759)
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:57:24 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1745)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 5441.8ms | Allocations: 146932)
+Completed 200 OK in 5443ms (Views: 5442.3ms | Allocations: 147566)
+
+
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3075.1ms | Allocations: 82368)
+Completed 200 OK in 3076ms (Views: 3075.3ms | Allocations: 83000)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:58:40 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1759)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3136.7ms | Allocations: 74672)
+Completed 200 OK in 3138ms (Views: 3137.2ms | Allocations: 75307)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:59:15 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1759)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3081.3ms | Allocations: 74664)
+Completed 200 OK in 3084ms (Views: 3081.9ms | Allocations: 75308)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 20:59:26 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1759)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3101.7ms | Allocations: 74665)
+Completed 200 OK in 3103ms (Views: 3102.3ms | Allocations: 75291)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:00:31 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2409)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 3107.7ms | Allocations: 76120)
+Completed 200 OK in 3111ms (Views: 3110.2ms | Allocations: 77390)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:00:55 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1747)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3080.4ms | Allocations: 74649)
+Completed 200 OK in 3082ms (Views: 3081.0ms | Allocations: 75384)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:01:28 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2416)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 11209)
+Completed 200 OK in 17ms (Views: 15.6ms | Allocations: 12459)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:02:15 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1750)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3084.0ms | Allocations: 74864)
+Completed 200 OK in 3086ms (Views: 3084.5ms | Allocations: 75576)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:02:23 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1757)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 9958)
+Completed 200 OK in 18ms (Views: 16.2ms | Allocations: 10594)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:03:03 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1750)
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:03:06 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1750)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 5481.2ms | Allocations: 146928)
+Completed 200 OK in 5483ms (Views: 5481.9ms | Allocations: 147554)
+
+
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3105.8ms | Allocations: 82395)
+Completed 200 OK in 3106ms (Views: 3106.0ms | Allocations: 83021)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:03:29 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1764)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3127.3ms | Allocations: 74671)
+Completed 200 OK in 3129ms (Views: 3127.7ms | Allocations: 75299)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:08:45 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1757)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 9958)
+Completed 200 OK in 14ms (Views: 13.7ms | Allocations: 10586)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:08:49 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1750)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 9950)
+Completed 200 OK in 17ms (Views: 15.7ms | Allocations: 10576)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:08:53 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1750)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 9950)
+Completed 200 OK in 12ms (Views: 11.3ms | Allocations: 10591)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:08:56 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1750)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3166.5ms | Allocations: 74657)
+Completed 200 OK in 3170ms (Views: 3167.5ms | Allocations: 75280)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:09:58 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1750)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 9991)
+Completed 200 OK in 15ms (Views: 13.2ms | Allocations: 10620)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:13:19 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1750)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 9950)
+Completed 200 OK in 33ms (Views: 30.7ms | Allocations: 10582)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:15:03 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 47ms (ActiveRecord: 8.8ms | Allocations: 6551)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1921)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 10236)
+Completed 200 OK in 262ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 11411)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:15:12 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.8ms | Allocations: 1710)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1749)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 9949)
+Completed 200 OK in 274ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 10446)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:15:12 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.5ms | Allocations: 1494)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1749)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 9943)
+Completed 200 OK in 267ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 10428)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:16:26 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.3ms | Allocations: 1497)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 1.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2396)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 3161.5ms | Allocations: 76106)
+Completed 200 OK in 3428ms (Views: 3162.7ms | ActiveRecord: 0.0ms | Allocations: 77211)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:16:36 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.3ms | Allocations: 1702)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2392)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 11175)
+Completed 200 OK in 273ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 12329)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:16:37 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.3ms | Allocations: 1694)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1749)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 9943)
+Completed 200 OK in 257ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 10478)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:16:38 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.2ms | Allocations: 1494)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1749)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 9950)
+Completed 200 OK in 277ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 10437)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:16:54 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.3ms | Allocations: 1503)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1763)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3084.4ms | Allocations: 74959)
+Completed 200 OK in 3353ms (Views: 3084.9ms | ActiveRecord: 0.0ms | Allocations: 75447)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:17:04 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.2ms | Allocations: 1497)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1749)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3069.5ms | Allocations: 74656)
+Completed 200 OK in 3332ms (Views: 3070.2ms | ActiveRecord: 0.0ms | Allocations: 75141)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:17:44 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.2ms | Allocations: 1506)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2410)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 11259)
+Completed 200 OK in 273ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 12366)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:17:54 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.4ms | Allocations: 1697)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2393)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 11177)
+Completed 200 OK in 277ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 12332)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:17:56 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.3ms | Allocations: 1719)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1749)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 9943)
+Completed 200 OK in 274ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 10478)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:17:58 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.2ms | Allocations: 1491)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1749)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 9943)
+Completed 200 OK in 272ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 10429)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:18:00 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.3ms | Allocations: 1506)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1749)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 9943)
+Completed 200 OK in 273ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 10428)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:18:15 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.3ms | Allocations: 1512)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2394)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 11177)
+Completed 200 OK in 268ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 12281)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:18:36 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.2ms | Allocations: 1700)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2394)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 11177)
+Completed 200 OK in 270ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 12331)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:18:45 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.2ms | Allocations: 1703)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2394)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 11177)
+Completed 200 OK in 270ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 12332)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:18:51 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.3ms | Allocations: 1718)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1750)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 9944)
+Completed 200 OK in 274ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 10479)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:19:39 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms | Allocations: 1494)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1750)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 105.4ms | Allocations: 12940)
+Completed 200 OK in 353ms (Views: 105.7ms | ActiveRecord: 0.0ms | Allocations: 13426)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:19:40 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1758)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 10108)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 10767)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:19:41 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1751)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 10097)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 10764)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:19:42 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms | Allocations: 1500)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1749)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 10090)
+Completed 200 OK in 263ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 10575)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:19:44 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.2ms | Allocations: 1485)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1749)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 10089)
+Completed 200 OK in 279ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 10574)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:21:20 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3038)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 11977)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 13230)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:21:34 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 206)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1986)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 10526)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 11752)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:21:43 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2382)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 11321)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 12664)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:21:44 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.2ms | Allocations: 1723)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1750)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 10091)
+Completed 200 OK in 266ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 10625)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:21:49 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.3ms | Allocations: 1494)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1750)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 10090)
+Completed 200 OK in 274ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 10576)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:23:42 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2442)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 11390)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 12668)
+
+
+Started GET "/users/Olvide%20mi%20contrase%C3%B1a" for ::1 at 2023-02-27 21:23:57 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/Olvide%20mi%20contrase%C3%B1a"):
+  
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:24:11 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1326)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1415)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2708)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container p-3">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    label: "Correo Electrónico",
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email", class: "input-design" }
+                     %>
+        <%= link_to "Olvide mi contraseña",new_user_password_path, %>
+        <%= f.input :password,
+                    label: "Contraseña",
+                    required: false,
+                    input_html: { autocomplete: "current-password", class: "input-design"  } %>
+        <%= f.input :remember_me, label: "Recordar mi cuenta",as: :boolean if devise_mapping.rememberable?%>
+      </div>
+
+      <div class="form-actions d-flex w-100 flex-column align-items-center">
+        <%= f.button :submit, "Log in", class: "btn btn-main-dark w-100" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+):
+1:    <!-- Mobile view -->
+2:    <div class = "show-on-mobile-login">
+3:      <%= render "components_mobile/header_logo" %>
+4:        <div class="container p-3">
+5:          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+6:          <div class="form-inputs">
+7:            <%= f.input :email,
+8:                        label: "Correo Electrónico",
+9:                        required: false,
+10:                        autofocus: true,
+11:                        input_html: { autocomplete: "email", class: "input-design" }
+12:                         %>
+13:            <%= link_to "Olvide mi contraseña",new_user_password_path, %>
+14:            <%= f.input :password,
+15:                        label: "Contraseña",
+16:                        required: false,
+17:                        input_html: { autocomplete: "current-password", class: "input-design"  } %>
+18:            <%= f.input :remember_me, label: "Recordar mi cuenta",as: :boolean if devise_mapping.rememberable?%>
+19:          </div>
+20:    
+21:          <div class="form-actions d-flex w-100 flex-column align-items-center">
+22:            <%= f.button :submit, "Log in", class: "btn btn-main-dark w-100" %>
+23:          </div>
+24:        <% end %>
+25:      </div>
+26:    </div>
+  
+app/views/devise/sessions/new.html.erb:13: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:13: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:13: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:13: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:13: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:13: syntax error, unexpected ')'
+app/views/devise/sessions/new.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting ')'
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:24:20 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2455)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 11400)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 12766)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:24:22 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 529)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2089)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 10624)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 11623)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-02-27 21:24:30 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2961)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 11499)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 12767)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:27:33 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2456)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 3093.5ms | Allocations: 76339)
+Completed 200 OK in 3097ms (Views: 3096.1ms | ActiveRecord: 0.0ms | Allocations: 77686)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:27:38 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 529)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2099)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 10635)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 11640)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:27:49 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1803)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3071.7ms | Allocations: 75075)
+Completed 200 OK in 3074ms (Views: 3072.3ms | Allocations: 75793)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:28:07 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2470)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 11410)
+Completed 200 OK in 14ms (Views: 13.6ms | Allocations: 12672)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:28:38 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1790)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3112.9ms | Allocations: 75068)
+Completed 200 OK in 3115ms (Views: 3113.4ms | Allocations: 75805)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:28:42 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 530)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2099)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 10635)
+Completed 200 OK in 14ms (Views: 12.7ms | Allocations: 11539)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:28:45 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1803)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 10149)
+Completed 200 OK in 18ms (Views: 16.9ms | Allocations: 10875)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:28:52 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1790)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 10197)
+Completed 200 OK in 11ms (Views: 9.8ms | Allocations: 10811)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:28:52 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1790)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 10136)
+Completed 200 OK in 11ms (Views: 9.8ms | Allocations: 10756)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:28:54 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1166)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 9520)
+Completed 200 OK in 13ms (Views: 12.5ms | Allocations: 10061)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:29:24 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1790)
+  Rendered layout layouts/application.html.erb (Duration: 430.1ms | Allocations: 30270)
+Completed 500 Internal Server Error in 432ms (Allocations: 30878)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "  }": expected "}", was ""
+        on line 14:4 of app/assets/stylesheets/pages/_home.scss
+        from line 2:1 of app/assets/stylesheets/pages/_index.scss
+        from line 12:1 of app/assets/stylesheets/application.scss
+>>   }
+
+   ---^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/pages/_home.scss:14
+app/views/layouts/application.html.erb:9
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:29:26 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1804)
+  Rendered layout layouts/application.html.erb (Duration: 424.4ms | Allocations: 30122)
+Completed 500 Internal Server Error in 427ms (Allocations: 30721)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "  }": expected "}", was ""
+        on line 14:4 of app/assets/stylesheets/pages/_home.scss
+        from line 2:1 of app/assets/stylesheets/pages/_index.scss
+        from line 12:1 of app/assets/stylesheets/application.scss
+>>   }
+
+   ---^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/pages/_home.scss:14
+app/views/layouts/application.html.erb:9
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:29:42 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1804)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3075.4ms | Allocations: 74988)
+Completed 200 OK in 3077ms (Views: 3075.9ms | Allocations: 75611)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:29:47 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1176)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 9531)
+Completed 200 OK in 16ms (Views: 14.2ms | Allocations: 10077)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:30:21 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1794)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3144.5ms | Allocations: 74864)
+Completed 200 OK in 3146ms (Views: 3145.0ms | Allocations: 75498)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:30:25 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1176)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 9531)
+Completed 200 OK in 7ms (Views: 7.0ms | Allocations: 10089)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:30:31 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1794)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3103.7ms | Allocations: 74869)
+Completed 200 OK in 3106ms (Views: 3104.5ms | Allocations: 75494)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:30:35 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1166)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 9520)
+Completed 200 OK in 14ms (Views: 13.3ms | Allocations: 10069)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:30:39 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1797)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 10143)
+Completed 200 OK in 12ms (Views: 11.0ms | Allocations: 10780)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:30:40 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1790)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 10136)
+Completed 200 OK in 8ms (Views: 7.8ms | Allocations: 10768)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:30:41 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1166)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 9520)
+Completed 200 OK in 10ms (Views: 8.8ms | Allocations: 10063)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:30:43 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1790)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 10136)
+Completed 200 OK in 18ms (Views: 16.0ms | Allocations: 10771)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:31:30 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1790)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3164.9ms | Allocations: 74865)
+Completed 200 OK in 3166ms (Views: 3165.2ms | Allocations: 75494)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:31:34 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1176)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 9530)
+Completed 200 OK in 11ms (Views: 10.5ms | Allocations: 10103)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:31:38 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1166)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 9520)
+Completed 200 OK in 11ms (Views: 10.0ms | Allocations: 10081)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:32:15 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1794)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3134.4ms | Allocations: 74864)
+Completed 200 OK in 3136ms (Views: 3134.9ms | Allocations: 75495)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:32:19 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1176)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 9530)
+Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 10091)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:32:34 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1792)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3129.7ms | Allocations: 74859)
+Completed 200 OK in 3131ms (Views: 3130.3ms | Allocations: 75492)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:32:38 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1166)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 9520)
+Completed 200 OK in 15ms (Views: 14.3ms | Allocations: 10072)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:32:41 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1171)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 9526)
+Completed 200 OK in 13ms (Views: 11.3ms | Allocations: 10094)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:32:47 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1166)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 9520)
+Completed 200 OK in 12ms (Views: 11.2ms | Allocations: 10069)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:33:02 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1794)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3116.1ms | Allocations: 74860)
+Completed 200 OK in 3117ms (Views: 3116.6ms | Allocations: 75500)
+
+
+Started GET "/users/password/new" for ::1 at 2023-02-27 21:33:06 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1166)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 9521)
+Completed 200 OK in 13ms (Views: 11.6ms | Allocations: 10065)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:33:13 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 27ms (ActiveRecord: 10.6ms | Allocations: 4632)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1801)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 10141)
+Completed 200 OK in 282ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 10649)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:35:48 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2520)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 3086.9ms | Allocations: 76404)
+Completed 200 OK in 3091ms (Views: 3089.5ms | ActiveRecord: 0.0ms | Allocations: 77655)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:36:14 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2532)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 11471)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 12810)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:36:28 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2521)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 11460)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 12805)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:37:46 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2522)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 11461)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 12821)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:37:54 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2522)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 11461)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 12812)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:37:55 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1828)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 10174)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 10930)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:38:06 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2524)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 11463)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 12724)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:38:17 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2523)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 11465)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 12811)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:38:24 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2530)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 11470)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.0ms | Allocations: 12821)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:38:36 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2522)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 11461)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 12810)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:38:45 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2524)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 11463)
+Completed 200 OK in 17ms (Views: 15.7ms | Allocations: 12797)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:38:49 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2522)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 11461)
+Completed 200 OK in 14ms (Views: 13.5ms | Allocations: 12806)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:38:58 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2523)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 11462)
+Completed 200 OK in 14ms (Views: 12.4ms | Allocations: 12805)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:39:03 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2523)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 11462)
+Completed 200 OK in 13ms (Views: 11.6ms | Allocations: 12820)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-02-27 21:39:13 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 478)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3272)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 11807)
+Completed 200 OK in 12ms (Views: 11.4ms | Allocations: 12844)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:39:23 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1842)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 10190)
+Completed 200 OK in 15ms (Views: 13.5ms | Allocations: 10923)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-02-27 21:39:25 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2318)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 10672)
+Completed 200 OK in 11ms (Views: 9.4ms | Allocations: 11253)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:40:34 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2527)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 11466)
+Completed 200 OK in 14ms (Views: 13.5ms | Allocations: 12727)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:47:07 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 19ms (ActiveRecord: 8.2ms | Allocations: 4710)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2516)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 11445)
+Completed 200 OK in 277ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 12598)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-02-27 21:47:09 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 478)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3272)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 11807)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 12840)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:49:20 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2524)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 11463)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 12805)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:49:22 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1830)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 10176)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 10909)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:51:55 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2760)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 11701)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 12962)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:52:11 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2740)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 11679)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 13045)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:52:47 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2740)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 11679)
+Completed 200 OK in 16ms (Views: 14.9ms | Allocations: 13026)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:54:56 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 88)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2741)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 11680)
+Completed 200 OK in 21ms (Views: 18.7ms | Allocations: 13014)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:54:58 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1893)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 10239)
+Completed 200 OK in 18ms (Views: 16.8ms | Allocations: 10960)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:55:01 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2740)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 11679)
+Completed 200 OK in 16ms (Views: 14.3ms | Allocations: 12915)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:55:18 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 88)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2741)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 11683)
+Completed 200 OK in 20ms (Views: 18.1ms | Allocations: 13012)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:55:25 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.1ms | Allocations: 88)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2755)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 11696)
+Completed 200 OK in 14ms (Views: 13.0ms | Allocations: 13022)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:55:40 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.1ms | Allocations: 88)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2741)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 11680)
+Completed 200 OK in 13ms (Views: 11.8ms | Allocations: 13017)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:55:49 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 88)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2741)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 11680)
+Completed 200 OK in 24ms (Views: 22.8ms | Allocations: 13033)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:56:10 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 88)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2741)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 11680)
+Completed 200 OK in 17ms (Views: 15.8ms | Allocations: 13005)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:56:23 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1893)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 10239)
+Completed 200 OK in 13ms (Views: 10.6ms | Allocations: 10992)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-27 21:56:37 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2742)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 11681)
+Completed 200 OK in 16ms (Views: 15.4ms | Allocations: 12929)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-27 21:58:54 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+Completed 401 Unauthorized in 1ms (Allocations: 470)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1892)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 10234)
+Completed 200 OK in 17ms (Views: 16.8ms | Allocations: 10719)
+
+
