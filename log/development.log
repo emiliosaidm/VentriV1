@@ -3250,3 +3250,947 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 17ms (Views: 16.8ms | Allocations: 10719)
 
 
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "VentriV1_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "VentriV1_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3807692464008009780)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3807692464008009780)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_in" for ::1 at 2023-02-28 21:33:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 98)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 37.2ms | Allocations: 18108)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 212)
+  Rendered layout layouts/application.html.erb (Duration: 3561.9ms | Allocations: 174174)
+Completed 200 OK in 3579ms (Views: 3566.6ms | ActiveRecord: 4.7ms | Allocations: 184878)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-02-28 21:33:58 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 585)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3952)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 12341)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 13632)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 08:51:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 592)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.6ms | Allocations: 11334)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 61.8ms | Allocations: 54903)
+Completed 200 OK in 80ms (Views: 64.7ms | ActiveRecord: 9.0ms | Allocations: 63884)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-03-01 09:05:36 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 88)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.1ms | Allocations: 114)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3259)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 12058)
+Completed 200 OK in 14ms (Views: 12.0ms | Allocations: 13811)
+
+
+Started GET "/users/log_in" for ::1 at 2023-03-01 09:05:41 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/log_in"):
+  
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:05:49 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 478)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3272)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 11658)
+Completed 200 OK in 16ms (Views: 15.1ms | Allocations: 12720)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:06:18 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 478)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3280)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 12382)
+Completed 200 OK in 16ms (Views: 15.1ms | Allocations: 13692)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:06:20 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2318)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 10770)
+Completed 200 OK in 20ms (Views: 19.4ms | Allocations: 11428)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:06:48 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3498)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 12350)
+Completed 200 OK in 23ms (Views: 20.6ms | Allocations: 13543)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:08:59 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3491)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 12292)
+Completed 200 OK in 21ms (Views: 19.1ms | Allocations: 13598)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:09:00 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2381)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 10585)
+Completed 200 OK in 14ms (Views: 12.8ms | Allocations: 11262)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:09:07 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3492)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 12293)
+Completed 200 OK in 23ms (Views: 21.7ms | Allocations: 13501)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:10:49 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2381)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 10585)
+Completed 200 OK in 23ms (Views: 17.5ms | Allocations: 11244)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:10:50 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2381)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 10585)
+Completed 200 OK in 10ms (Views: 9.8ms | Allocations: 11157)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:10:57 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 1.6ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3492)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 12293)
+Completed 200 OK in 29ms (Views: 26.3ms | Allocations: 13483)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:11:21 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 479)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.7ms | Allocations: 3502)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | Allocations: 12604)
+Completed 200 OK in 42ms (Views: 40.2ms | Allocations: 13894)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:11:47 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3493)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 12593)
+Completed 200 OK in 22ms (Views: 20.1ms | Allocations: 13870)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:11:49 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2381)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 10815)
+Completed 200 OK in 13ms (Views: 12.1ms | Allocations: 11471)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:11:51 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2381)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 10636)
+Completed 200 OK in 17ms (Views: 15.9ms | Allocations: 11211)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:11:51 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2381)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 10585)
+Completed 200 OK in 14ms (Views: 12.0ms | Allocations: 11149)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:11:51 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2381)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 10585)
+Completed 200 OK in 16ms (Views: 15.4ms | Allocations: 11160)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:12:12 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3492)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 12293)
+Completed 200 OK in 22ms (Views: 19.3ms | Allocations: 13489)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:16:54 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3492)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 12293)
+Completed 200 OK in 23ms (Views: 21.6ms | Allocations: 13579)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:28:03 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3492)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 3333.2ms | Allocations: 74720)
+Completed 200 OK in 3339ms (Views: 3336.8ms | Allocations: 76027)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:30:06 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2391)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3141.8ms | Allocations: 73295)
+Completed 200 OK in 3145ms (Views: 3142.5ms | Allocations: 73958)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:35:54 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3143)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3228)
+Completed 500 Internal Server Error in 9ms (Allocations: 4410)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x000000010b1e81b8>::Nombre
+
+           '.freeze;@output_buffer.append=( f.input Nombre:,
+                                                    ^^^^^^^):
+     6: 
+     7:       <div class="form-inputs">
+     8:         <div id="name-input">
+     9:            <%= f.input Nombre:,
+    10:                     required: true,
+    11:                     autofocus: true,
+    12:                     input_html: { autocomplete: "John" }%>
+  
+app/views/devise/registrations/new.html.erb:9
+app/views/devise/registrations/new.html.erb:4
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:36:42 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3079)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3164)
+Completed 500 Internal Server Error in 10ms (Allocations: 4425)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x000000010b404528>::Nombre
+
+           '.freeze;@output_buffer.append=( f.input Nombre:,
+                                                    ^^^^^^^):
+     6: 
+     7:       <div class="form-inputs">
+     8:         <div id="name-input">
+     9:            <%= f.input Nombre:,
+    10:                     required: true,
+    11:                     autofocus: true,
+    12:                     input_html: { autocomplete: "John" }%>
+  
+app/views/devise/registrations/new.html.erb:9
+app/views/devise/registrations/new.html.erb:4
+Started GET "/users/sign_up" for ::1 at 2023-03-01 09:38:51 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 7663)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 7748)
+Completed 500 Internal Server Error in 18ms (Allocations: 9009)
+
+
+  
+ActionView::Template::Error (undefined method `Nombre' for #<User id: nil, email: "", created_at: nil, updated_at: nil>):
+     6: 
+     7:       <div class="form-inputs">
+     8:         <div id="name-input">
+     9:            <%= f.input :Nombre,
+    10:                     required: true,
+    11:                     autofocus: true,
+    12:                     input_html: { autocomplete: "John" }%>
+  
+app/views/devise/registrations/new.html.erb:9
+app/views/devise/registrations/new.html.erb:4
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:04:06 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230301140341_add_registration_fields_to_users.rb
+
+
+):
+  
+activerecord (7.0.4.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activesupport (7.0.4.2) lib/active_support/file_update_checker.rb:93:in `execute_if_updated'
+activerecord (7.0.4.2) lib/active_record/migration.rb:599:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3807692464008009780)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddRegistrationFieldsToUsers (20230301140341)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mALTER TABLE "users" ADD "Nombre" character varying[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "users" ADD "Apellido" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230301140341"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(3807692464008009780)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:04:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 516)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 4806)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 3262.6ms | Allocations: 78882)
+Completed 200 OK in 3276ms (Views: 3263.0ms | ActiveRecord: 10.4ms | Allocations: 83851)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:15:25 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3663)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 11872)
+Completed 200 OK in 19ms (Views: 16.5ms | Allocations: 12529)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:16:05 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.6ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4794)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 13599)
+Completed 200 OK in 31ms (Views: 27.8ms | Allocations: 14815)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:18:15 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.6ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4791)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 13596)
+Completed 200 OK in 23ms (Views: 21.6ms | Allocations: 14870)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:19:53 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.6ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 4814)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 13619)
+Completed 200 OK in 27ms (Views: 25.3ms | Allocations: 14916)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:23:22 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1406)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1495)
+Completed 500 Internal Server Error in 7ms (Allocations: 2766)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <h2 class="big-header">¡Empecemos!<span> <span><i class="fa-solid fa-rocket"></i></h2>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <div id="name-inputs">
+           <%= f.input :Nombre,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "John", class: "input-design"}%>
+
+            <%= f.input :Apellido,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "Hancock", class: "input-design" }%>
+        </div>
+        <%= f.input :email,
+                    label: "Correo Electrónico",
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email", class: "input-design" }%>
+        <%= f.input :password,
+                    label: "Contraseña",
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password", class: "input-design" } %>
+        <%= f.input :password_confirmation,
+                    label: "Confirmar la Contraseña"
+                    required: true,
+                    input_html: { autocomplete: "new-password", class: "input-design" } %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Sign up" %>
+      </div>
+    <% end %>
+</div>
+<%= render "devise/shared/links" %>
+
+):
+1:    <div class = "show-on-mobile-login">
+2:      <%= render "components_mobile/header_logo" %>
+3:        <h2 class="big-header">¡Empecemos!<span> <span><i class="fa-solid fa-rocket"></i></h2>
+4:        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
+5:          <%= f.error_notification %>
+6:    
+7:          <div class="form-inputs">
+8:            <div id="name-inputs">
+9:               <%= f.input :Nombre,
+10:                        required: true,
+11:                        autofocus: true,
+12:                        input_html: { autocomplete: "John", class: "input-design"}%>
+13:    
+14:                <%= f.input :Apellido,
+15:                        required: true,
+16:                        autofocus: true,
+17:                        input_html: { autocomplete: "Hancock", class: "input-design" }%>
+18:            </div>
+19:            <%= f.input :email,
+20:                        label: "Correo Electrónico",
+21:                        required: true,
+22:                        autofocus: true,
+23:                        input_html: { autocomplete: "email", class: "input-design" }%>
+24:            <%= f.input :password,
+25:                        label: "Contraseña",
+26:                        required: true,
+27:                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+28:                        input_html: { autocomplete: "new-password", class: "input-design" } %>
+29:            <%= f.input :password_confirmation,
+30:                        label: "Confirmar la Contraseña"
+31:                        required: true,
+32:                        input_html: { autocomplete: "new-password", class: "input-design" } %>
+33:          </div>
+34:    
+35:          <div class="form-actions">
+36:            <%= f.button :submit, "Sign up" %>
+37:          </div>
+38:        <% end %>
+39:    </div>
+40:    <%= render "devise/shared/links" %>
+  
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:31: Can't assign to true
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:31: Can't assign to true
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:31: Can't assign to true
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:31: Can't assign to true
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:31: Can't assign to true
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:31: Can't assign to true
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:23:43 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.7ms | Allocations: 87)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 474)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4461)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 13451)
+Completed 200 OK in 31ms (Views: 29.9ms | Allocations: 14742)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:25:52 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4062)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 12872)
+Completed 200 OK in 21ms (Views: 20.0ms | Allocations: 14157)
+
+
+Started POST "/users" for ::1 at 2023-03-01 14:26:26 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"Nombre"=>"", "Apellido"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :Nombre, :Apellido. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000000010a898590>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"Nombre"=>"", "Apellido"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 6024)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 14330)
+Completed 422 Unprocessable Entity in 41ms (Views: 15.9ms | ActiveRecord: 10.9ms | Allocations: 20007)
+
+
+Started GET "/users" for ::1 at 2023-03-01 14:27:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2023-03-01 14:28:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2023-03-01 14:28:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:28:46 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 4076)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 13124)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 14272)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:28:57 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 4052)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 12857)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 14170)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:29:34 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 4065)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 13051)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 14353)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:29:55 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 4064)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 12868)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 14166)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:30:11 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4054)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 12858)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 14156)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:30:13 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3183)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 11391)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 12065)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:31:53 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4054)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 12947)
+Completed 200 OK in 24ms (Views: 22.5ms | Allocations: 14136)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:33:51 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 4060)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 12958)
+Completed 200 OK in 15ms (Views: 14.0ms | Allocations: 14237)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:34:21 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.5ms | Allocations: 92)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 4075)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 13061)
+Completed 200 OK in 34ms (Views: 31.6ms | Allocations: 14347)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:35:58 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 4078)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 12885)
+Completed 200 OK in 24ms (Views: 23.0ms | Allocations: 14161)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:36:20 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4058)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 12862)
+Completed 200 OK in 21ms (Views: 19.8ms | Allocations: 14168)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:36:46 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4058)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 12862)
+Completed 200 OK in 23ms (Views: 22.2ms | Allocations: 14153)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:41:13 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4058)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 12951)
+Completed 200 OK in 29ms (Views: 25.2ms | Allocations: 14239)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:41:54 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.6ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 4057)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 12959)
+Completed 200 OK in 32ms (Views: 29.8ms | Allocations: 14260)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:42:19 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 4079)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 13065)
+Completed 200 OK in 29ms (Views: 27.5ms | Allocations: 14357)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:42:20 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3183)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 11394)
+Completed 200 OK in 19ms (Views: 15.7ms | Allocations: 12073)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:42:46 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 4071)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 12875)
+Completed 200 OK in 30ms (Views: 27.5ms | Allocations: 14070)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:42:46 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 3194)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 11402)
+Completed 200 OK in 12ms (Views: 9.1ms | Allocations: 12066)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:44:21 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.6ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.6ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 4058)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 12863)
+Completed 200 OK in 28ms (Views: 27.4ms | Allocations: 14070)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:44:32 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4058)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 13041)
+Completed 200 OK in 28ms (Views: 26.3ms | Allocations: 14306)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:44:33 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3213)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 11594)
+Completed 200 OK in 15ms (Views: 12.4ms | Allocations: 12256)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:44:41 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4057)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 12864)
+Completed 200 OK in 35ms (Views: 30.3ms | Allocations: 14065)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:45:45 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4059)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 12863)
+Completed 200 OK in 27ms (Views: 24.2ms | Allocations: 14139)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-01 14:46:18 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 4058)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 12864)
+Completed 200 OK in 17ms (Views: 16.3ms | Allocations: 14161)
+
+
