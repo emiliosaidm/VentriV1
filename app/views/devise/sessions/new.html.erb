@@ -1,5 +1,6 @@
 <!-- Mobile view -->
 <div class = "show-on-mobile-login">
+
   <%= render "components_mobile/header_logo" %>
     <div class="container p-3">
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
@@ -26,7 +27,9 @@
           <%= link_to "Registrarme", new_user_registration_path, class: "btn btn-main-dark w-100 mt-2" %>
         </div>
       </div>
+
     <% end %>
+
   </div>
   <br>
   <%= render "components_mobile/social_media_footer" %>
