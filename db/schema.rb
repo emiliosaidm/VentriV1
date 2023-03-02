@@ -10,16 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2023_03_01_040327) do
-=======
-ActiveRecord::Schema[7.0].define(version: 2023_03_01_140341) do
->>>>>>> 49cb6765e6e876294a4cceebb56a457971fada83
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "addresses", force: :cascade do |t|
-    t.string "user_id_references"
+    t.bigint "user_id", null: false
     t.string "street"
     t.string "state"
     t.string "city"
@@ -29,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_140341) do
     t.string "exterior_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
   create_table "car_pick_up_locations", force: :cascade do |t|
@@ -143,7 +140,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_140341) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
     t.string "name"
     t.string "last_name"
     t.string "phone_number"
@@ -151,14 +147,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_140341) do
     t.string "gender"
     t.integer "driver_verified", default: 0
     t.integer "host_verified", default: 0
-=======
-    t.string "Nombre"
-    t.string "Apellido"
->>>>>>> 49cb6765e6e876294a4cceebb56a457971fada83
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addresses", "users"
   add_foreign_key "car_pick_up_locations", "cars"
   add_foreign_key "car_pick_up_locations", "pick_up_locations"
   add_foreign_key "car_reviews", "cars"
