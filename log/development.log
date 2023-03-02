@@ -3250,3 +3250,1493 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 17ms (Views: 16.8ms | Allocations: 10719)
 
 
+Started GET "/" for ::1 at 2023-02-28 21:54:49 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 283)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 83.6ms | Allocations: 55465)
+Completed 200 OK in 88ms (Views: 85.1ms | ActiveRecord: 0.0ms | Allocations: 58419)
+
+
+Started GET "/user/log_in" for ::1 at 2023-02-28 21:55:04 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/user/log_in"):
+  
+Started GET "/user/sign_in" for ::1 at 2023-02-28 21:55:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/user/sign_in"):
+  
+Started GET "/usesr/sign_in" for ::1 at 2023-02-28 21:55:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/usesr/sign_in"):
+  
+Started GET "//users/sign_i" for ::1 at 2023-02-28 21:55:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_i"):
+  
+Started GET "//users/sign_in" for ::1 at 2023-02-28 21:56:00 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.5ms | Allocations: 88)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.4ms | Allocations: 114)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.5ms | Allocations: 10276)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 18987)
+Completed 200 OK in 48ms (Views: 33.0ms | ActiveRecord: 5.9ms | Allocations: 25883)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-02-28 21:56:04 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 580)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3841)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 12379)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 13590)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-02-28 21:58:14 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2338)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 10869)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 11497)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-02-28 21:58:15 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1907)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 10253)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 10858)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-28 21:58:16 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.9ms | Allocations: 3551)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2059)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 10514)
+Completed 200 OK in 269ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 11689)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-28 21:58:17 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.4ms | Allocations: 1669)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1891)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 10407)
+Completed 200 OK in 275ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 10909)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-02-28 21:58:18 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.3ms | Allocations: 1428)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1891)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 10231)
+Completed 200 OK in 271ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 10716)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-02-28 21:59:16 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2324)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 10842)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 11353)
+
+
+Started POST "/users" for ::1 at 2023-02-28 21:59:39 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "saidemilio151@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-03-01 03:59:40.250804"], ["updated_at", "2023-03-01 03:59:40.250804"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 275ms (ActiveRecord: 3.6ms | Allocations: 7791)
+
+
+Started GET "/" for ::1 at 2023-02-28 21:59:40 -0600
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 8606)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 8848)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (11.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3807692464008009780)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldsToUsers (20230301040327)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "phone_number" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "date_of_birth" date[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "gender" character varying[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "driver_verified" integer DEFAULT 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "host_verified" integer DEFAULT 0[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230301040327"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3807692464008009780)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_in" for ::1 at 2023-02-28 22:04:34 -0600
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2204)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 10896)
+Completed 200 OK in 33ms (Views: 19.1ms | ActiveRecord: 5.3ms | Allocations: 19825)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-02-28 22:04:36 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2605)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 11272)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 12339)
+
+
+Started POST "/users" for ::1 at 2023-02-28 22:04:48 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"saidemilio151@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "saidemilio151@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name", "last_name", "phone_number", "date_of_birth", "gender", "driver_verified", "host_verified") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["email", "saidemilio151@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-03-01 04:04:48.718012"], ["updated_at", "2023-03-01 04:04:48.718012"], ["name", nil], ["last_name", nil], ["phone_number", nil], ["date_of_birth", nil], ["gender", nil], ["driver_verified", 0], ["host_verified", 0]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 275ms (ActiveRecord: 1.9ms | Allocations: 6457)
+
+
+Started GET "/" for ::1 at 2023-02-28 22:04:48 -0600
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 12)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 8904)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 9546)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/validations/address" for ::1 at 2023-02-28 22:33:14 -0600
+Processing by ValidationsController#show_validation_address as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 19ms (ActiveRecord: 8.0ms | Allocations: 9824)
+
+
+  
+ActionController::MissingExactTemplate (ValidationsController#show_validation_address is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/validations/address" for ::1 at 2023-02-28 22:33:45 -0600
+Processing by ValidationsController#show_validation_address as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_address.html.erb within layouts/application
+  Rendered validations/show_validation_address.html.erb within layouts/application (Duration: 0.1ms | Allocations: 102)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 9295)
+Completed 200 OK in 20ms (Views: 7.8ms | ActiveRecord: 6.8ms | Allocations: 16645)
+
+
+Started GET "/validations/address" for ::1 at 2023-02-28 22:33:45 -0600
+Processing by ValidationsController#show_validation_address as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_address.html.erb within layouts/application
+  Rendered validations/show_validation_address.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 8352)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 10109)
+
+
+Started GET "/validations/user_Data" for ::1 at 2023-02-28 22:35:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/validations/user_Data"):
+  
+Started GET "/validations/user_Data" for ::1 at 2023-02-28 22:35:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/validations/user_Data"):
+  
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:35:45 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 16ms (ActiveRecord: 5.4ms | Allocations: 7177)
+
+
+  
+ActionController::MissingExactTemplate (ValidationsController#show_validation_user_data is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:36:01 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 0.3ms | Allocations: 99)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 9292)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 11465)
+
+
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:36:01 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 8352)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 10108)
+
+
+Started GET "/validations/" for ::1 at 2023-02-28 22:38:44 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 0.1ms | Allocations: 99)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 9108)
+Completed 200 OK in 15ms (Views: 6.2ms | ActiveRecord: 5.0ms | Allocations: 16436)
+
+
+Started GET "/validations/" for ::1 at 2023-02-28 22:40:31 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 7.0ms | Allocations: 5362)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5447)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 7724)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x000000000245e0>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/" for ::1 at 2023-02-28 22:41:34 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 16.7ms | Allocations: 5279)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 5364)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms | Allocations: 7638)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x00000000024928>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/" for ::1 at 2023-02-28 22:41:35 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 13.8ms | Allocations: 4760)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 4839)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms | Allocations: 6569)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x00000000024c20>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/" for ::1 at 2023-02-28 22:41:39 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 8.7ms | Allocations: 5279)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 5364)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms | Allocations: 7435)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x00000000024f40>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/" for ::1 at 2023-02-28 22:41:39 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 9.2ms | Allocations: 4760)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4839)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms | Allocations: 6569)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x00000000025210>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/" for ::1 at 2023-02-28 22:41:46 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 15.8ms | Allocations: 4760)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 4839)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms | Allocations: 6365)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x000000000254e0>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations" for ::1 at 2023-02-28 22:41:58 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 14.9ms | Allocations: 5279)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 5364)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms | Allocations: 7434)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x00000000025800>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations" for ::1 at 2023-02-28 22:42:04 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4761)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4846)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.7ms | Allocations: 11797)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x0000000002a1e8>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations" for ::1 at 2023-02-28 22:42:05 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 13.0ms | Allocations: 4760)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4839)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms | Allocations: 6568)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x0000000002a4e0>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations" for ::1 at 2023-02-28 22:42:09 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 0.4ms | Allocations: 213)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 9414)
+Completed 200 OK in 16ms (Views: 6.7ms | ActiveRecord: 5.5ms | Allocations: 16495)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:42:45 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 0.4ms | Allocations: 345)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 9523)
+Completed 200 OK in 19ms (Views: 9.6ms | ActiveRecord: 4.6ms | Allocations: 16805)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:42:46 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 0.4ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 8426)
+Completed 200 OK in 16ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 10159)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:42:54 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 1.3ms | Allocations: 345)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 9339)
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 11473)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:42:55 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 8426)
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 10167)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:42:57 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 1.0ms | Allocations: 344)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 9337)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 11468)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:42:57 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 9)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 0.4ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 8427)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 10182)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:42:58 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 0.5ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 8594)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 10135)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:43:05 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 8426)
+Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 0.3ms | Allocations: 9994)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:43:15 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 1.1ms | Allocations: 344)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 9337)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 11486)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:43:30 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 0.3ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3275.5ms | Allocations: 73924)
+Completed 200 OK in 3279ms (Views: 3275.9ms | ActiveRecord: 0.2ms | Allocations: 75670)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:43:43 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 1.0ms | Allocations: 349)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 9342)
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 11464)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:43:56 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 1.0ms | Allocations: 345)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 9338)
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 11644)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:44:32 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 1.3ms | Allocations: 345)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 9338)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 11668)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:44:32 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 8426)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 10166)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:44:38 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 1.0ms | Allocations: 344)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 9337)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 11447)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:44:57 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 1.3ms | Allocations: 345)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 9338)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 11671)
+
+
+Started GET "/validations" for ::1 at 2023-02-28 22:44:58 -0600
+Processing by ValidationsController#show_validation as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | Allocations: 8428)
+Completed 200 OK in 59ms (Views: 48.1ms | ActiveRecord: 0.2ms | Allocations: 10160)
+
+
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:46:44 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 12.4ms | Allocations: 5119)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5198)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms | Allocations: 6825)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x00000000034080>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:46:59 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4781)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4866)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 4.1ms | Allocations: 11868)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x00000000038b08>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:46:59 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4778)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4857)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 6632)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<ActionView::Base:0x00000000038dd8>
+
+      '.freeze;@output_buffer.append=  simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| @output_buffer.safe_append='
+                                                       ^^^^^^^^
+Did you mean?  rescue):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:47:21 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 7.3ms | Allocations: 5613)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5698)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 7817)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x00000000039120>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:47:21 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 5.0ms | Allocations: 5005)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 5084)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 6860)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x00000000039440>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:47:26 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 6.2ms | Allocations: 5562)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 5647)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms | Allocations: 7763)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x00000000039760>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:47:27 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 13.3ms | Allocations: 5005)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5084)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms | Allocations: 6860)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x00000000039a58>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:48:03 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1344)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1433)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 3554)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container p-3">
+      <%= simple_form_for(@user) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    label: "Correo Electrónico",
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email", class: "input-design" }
+                     %>
+        <%= f.input :password,
+                    label: "Contraseña",
+                    required: false,
+                    input_html: { autocomplete: "current-password", class: "input-design"  } %>
+        <%= link_to "Olvidé mi contraseña",, class: "link-design" %>
+        <%= f.input :remember_me, label: "Recordar mi cuenta",as: :boolean if devise_mapping.rememberable?%>
+      </div>
+
+      <div class="form-actions d-flex w-100 flex-column align-items-center">
+        <%= f.button :submit, "Iniciar Sesión", class: "btn btn-main-dark w-100" %>
+        <br>
+        <div class="d-flex w-100 flex-column align-items-left">
+          <h3>¿No tienes cuenta?</h3>
+          <%= link_to "Registrarme", class: "btn btn-main-dark w-100 mt-2" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <%= render "components_mobile/social_media_footer" %>
+</div>
+
+):
+1:    <!-- Mobile view -->
+2:    <div class = "show-on-mobile-login">
+3:      <%= render "components_mobile/header_logo" %>
+4:        <div class="container p-3">
+5:          <%= simple_form_for(@user) do |f| %>
+6:          <div class="form-inputs">
+7:            <%= f.input :email,
+8:                        label: "Correo Electrónico",
+9:                        required: false,
+10:                        autofocus: true,
+11:                        input_html: { autocomplete: "email", class: "input-design" }
+12:                         %>
+13:            <%= f.input :password,
+14:                        label: "Contraseña",
+15:                        required: false,
+16:                        input_html: { autocomplete: "current-password", class: "input-design"  } %>
+17:            <%= link_to "Olvidé mi contraseña",, class: "link-design" %>
+18:            <%= f.input :remember_me, label: "Recordar mi cuenta",as: :boolean if devise_mapping.rememberable?%>
+19:          </div>
+20:    
+21:          <div class="form-actions d-flex w-100 flex-column align-items-center">
+22:            <%= f.button :submit, "Iniciar Sesión", class: "btn btn-main-dark w-100" %>
+23:            <br>
+24:            <div class="d-flex w-100 flex-column align-items-left">
+25:              <h3>¿No tienes cuenta?</h3>
+26:              <%= link_to "Registrarme", class: "btn btn-main-dark w-100 mt-2" %>
+27:            </div>
+28:          </div>
+29:        <% end %>
+30:      </div>
+31:      <br>
+32:      <%= render "components_mobile/social_media_footer" %>
+33:    </div>
+  
+app/views/validations/show_validation_user_data.html.erb:17: syntax error, unexpected ','
+app/views/validations/show_validation_user_data.html.erb:17: syntax error, unexpected ','
+app/views/validations/show_validation_user_data.html.erb:17: syntax error, unexpected ','
+app/views/validations/show_validation_user_data.html.erb:17: syntax error, unexpected ','
+app/views/validations/show_validation_user_data.html.erb:17: syntax error, unexpected ','
+app/views/validations/show_validation_user_data.html.erb:17: syntax error, unexpected ','
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:48:29 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 6.4ms | Allocations: 5499)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 5584)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms | Allocations: 7904)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000003a138>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:49:23 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.6ms | Allocations: 87)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 8.4ms | Allocations: 5457)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5542)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 7862)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000003a4a8>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:49:24 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 6.9ms | Allocations: 5005)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5084)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 6860)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000003a7c8>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:49:24 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 9.6ms | Allocations: 5005)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 5084)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms | Allocations: 6656)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000003aa98>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:49:25 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 6.8ms | Allocations: 5005)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5084)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 6656)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000003ad68>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:49:28 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 12.8ms | Allocations: 5005)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5084)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms | Allocations: 6656)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000003b038>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started PUT "/__web_console/repl_sessions/eba86e38d0f75a97c406362b3b541055" for ::1 at 2023-02-28 22:49:39 -0600
+Started PUT "/__web_console/repl_sessions/eba86e38d0f75a97c406362b3b541055" for ::1 at 2023-02-28 22:49:39 -0600
+Started PUT "/__web_console/repl_sessions/eba86e38d0f75a97c406362b3b541055" for ::1 at 2023-02-28 22:49:46 -0600
+Started PUT "/__web_console/repl_sessions/eba86e38d0f75a97c406362b3b541055" for ::1 at 2023-02-28 22:49:47 -0600
+Started PUT "/__web_console/repl_sessions/eba86e38d0f75a97c406362b3b541055" for ::1 at 2023-02-28 22:49:50 -0600
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:52:49 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 12.1ms | Allocations: 5460)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5545)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 7905)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000003b380>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user, action: "") do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:52:49 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 7.1ms | Allocations: 5006)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 5085)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 6861)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000003b6a0>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user, action: "") do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:52:57 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1486)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 10612)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.2ms | Allocations: 12767)
+
+
+Started GET "/validations/user_data" for ::1 at 2023-02-28 22:52:58 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 0.7ms | Allocations: 876)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 9222)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 10990)
+
+
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:7:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started PATCH "/validations/user_data" for ::1 at 2023-03-01 09:50:01 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/validations/user_data"):
+  
+Started GET "/validations/user_data" for ::1 at 2023-03-01 09:50:01 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 4.2ms | Allocations: 5082)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 5167)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 8.0ms | Allocations: 14892)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `url' for #<ActionView::Base:0x0000000003d6d0>
+
+      '.freeze;@output_buffer.append=  simple_form_for(@user, url: ) do |f| @output_buffer.safe_append='
+                                                              ^^^^
+Did you mean?  URI):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user, url: ) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/validations/user_data" for ::1 at 2023-03-01 09:50:11 -0600
+Processing by ValidationsController#show_validation_user_data as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering validations/show_validation_user_data.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered validations/show_validation_user_data.html.erb within layouts/application (Duration: 2.7ms | Allocations: 4720)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 4799)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 6540)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `url' for #<ActionView::Base:0x0000000003d9c8>
+
+      '.freeze;@output_buffer.append=  simple_form_for(@user, url: ) do |f| @output_buffer.safe_append='
+                                                              ^^^^
+Did you mean?  URI):
+    2: <div class = "show-on-mobile-login">
+    3:   <%= render "components_mobile/header_logo" %>
+    4:     <div class="container p-3">
+    5:       <%= simple_form_for(@user, url: ) do |f| %>
+    6:       <div class="form-inputs">
+    7:         <%= f.input :email,
+    8:                     label: "Correo Electrónico",
+  
+app/views/validations/show_validation_user_data.html.erb:5
+Started GET "/" for ::1 at 2023-03-01 09:58:14 -0600
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 107)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 9566)
+Completed 200 OK in 12ms (Views: 11.9ms | Allocations: 10337)
+
+

@@ -1,0 +1,21 @@
+<!-- Mobile view -->
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+    <div class="container p-3">
+      <%= simple_form_for(@user, url: ) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    label: "Correo Electrónico",
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email", class: "input-design" }
+                     %>
+      </div>
+
+      <div class="form-actions d-flex w-100 flex-column align-items-center">
+        <%= f.button :submit, "Iniciar Sesión", class: "btn btn-main-dark w-100" %>
+      </div>
+    <% end %>
+  </div>
+  <br>
+</div>
