@@ -5831,3 +5831,380 @@ Migrating to AddFieldsToUsers (20230301040327)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3807692464008009780)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-03-02 17:33:15 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 283)
+Started GET "/" for ::1 at 2023-03-02 17:33:17 -0600
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 5597.2ms | Allocations: 191067)
+Completed 200 OK in 5601ms (Views: 5598.7ms | ActiveRecord: 0.0ms | Allocations: 194008)
+
+
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 3184.2ms | Allocations: 122082)
+Completed 200 OK in 3185ms (Views: 3184.4ms | ActiveRecord: 0.0ms | Allocations: 122393)
+
+
+Started GET "/" for ::1 at 2023-03-02 17:33:28 -0600
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 8747)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 9024)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-03-02 17:33:43 -0600
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.4ms | Allocations: 88)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.4ms | Allocations: 113)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.1ms | Allocations: 10421)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 18947)
+Completed 200 OK in 75ms (Views: 49.5ms | ActiveRecord: 11.5ms | Allocations: 32234)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:33:49 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.9ms | Allocations: 8718)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 8815)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 10012)
+
+
+  
+ActionView::Template::Error (undefined method `Nombre' for #<User id: nil, email: "", created_at: nil, updated_at: nil, name: nil, last_name: nil, phone_number: nil, date_of_birth: nil, gender: nil, driver_verified: 0, host_verified: 0>):
+     7:       <div class="form-inputs p-1 m-2">
+     8:         <div id="name-inputs">
+     9:           <div>
+    10:           <%= f.input :Nombre,
+    11:                       required: true,
+    12:                       autofocus: true,
+    13:                       input_html: { autocomplete: "John", class: "input-design"}%>
+  
+app/views/devise/registrations/new.html.erb:10
+app/views/devise/registrations/new.html.erb:4
+Started GET "/" for ::1 at 2023-03-02 17:34:49 -0600
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 111)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 9344)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 10334)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-03-02 17:35:09 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.3ms | Allocations: 86)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2810)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 11336)
+Completed 200 OK in 20ms (Views: 12.0ms | ActiveRecord: 4.2ms | Allocations: 16801)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:35:13 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4269)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 12806)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 14003)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:35:24 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.4ms | Allocations: 86)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4062)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 13017)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 14256)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:36:08 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3862)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 12813)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 14050)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:36:18 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3846)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 12796)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 14036)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:39:03 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3853)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 12804)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 14046)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:39:26 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1401)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1490)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2702)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class = "show-on-mobile-login">
+  <%= render "components_mobile/header_logo" %>
+  <div class="container p-3">
+      <h2 class="big-header">¡Empecemos!<span> <span><i class="fa-solid fa-rocket"></i></h2>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
+        <%= f.error_notification %>
+        <div class="form-inputs p-1 m-2">
+          <div id="name-inputs">
+            <div>
+            <%= f.input :name, "No,bre"
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "John", class: "input-design"}%>
+            </div>
+            <div style="margin-left: 5px">
+            <%= f.input :last_name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "Hancock", class: "input-design" }%>
+            </div>
+          </div>
+          <%= f.input :email,
+                      label: "Correo Electrónico",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email", class: "input-design" }%>
+          <%= f.input :password,
+                      label: "Contraseña",
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password", class: "input-design" } %>
+          <%= f.input :password_confirmation,
+                      label: "Confirmar la Contraseña",
+                      required: true,
+                      input_html: { autocomplete: "new-password", class: "input-design" } %>
+        </div>
+
+        <div class="form-actions d-flex w-100 flex-column align-items-center">
+          <%= f.button :submit, "Continuar", class: "btn btn-main-dark mt-2 w-100" %>
+        </div>
+      <% end %>
+      <br>
+  </div>
+</div>
+
+):
+1:    <div class = "show-on-mobile-login">
+2:      <%= render "components_mobile/header_logo" %>
+3:      <div class="container p-3">
+4:          <h2 class="big-header">¡Empecemos!<span> <span><i class="fa-solid fa-rocket"></i></h2>
+5:          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
+6:            <%= f.error_notification %>
+7:            <div class="form-inputs p-1 m-2">
+8:              <div id="name-inputs">
+9:                <div>
+10:                <%= f.input :name, "No,bre"
+11:                            required: true,
+12:                            autofocus: true,
+13:                            input_html: { autocomplete: "John", class: "input-design"}%>
+14:                </div>
+15:                <div style="margin-left: 5px">
+16:                <%= f.input :last_name,
+17:                            required: true,
+18:                            autofocus: true,
+19:                            input_html: { autocomplete: "Hancock", class: "input-design" }%>
+20:                </div>
+21:              </div>
+22:              <%= f.input :email,
+23:                          label: "Correo Electrónico",
+24:                          required: true,
+25:                          autofocus: true,
+26:                          input_html: { autocomplete: "email", class: "input-design" }%>
+27:              <%= f.input :password,
+28:                          label: "Contraseña",
+29:                          required: true,
+30:                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+31:                          input_html: { autocomplete: "new-password", class: "input-design" } %>
+32:              <%= f.input :password_confirmation,
+33:                          label: "Confirmar la Contraseña",
+34:                          required: true,
+35:                          input_html: { autocomplete: "new-password", class: "input-design" } %>
+36:            </div>
+37:    
+38:            <div class="form-actions d-flex w-100 flex-column align-items-center">
+39:              <%= f.button :submit, "Continuar", class: "btn btn-main-dark mt-2 w-100" %>
+40:            </div>
+41:          <% end %>
+42:          <br>
+43:      </div>
+44:    </div>
+  
+app/views/devise/registrations/new.html.erb:11: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:11: Can't assign to true
+app/views/devise/registrations/new.html.erb:12: Can't assign to true
+app/views/devise/registrations/new.html.erb:11: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:11: Can't assign to true
+app/views/devise/registrations/new.html.erb:12: Can't assign to true
+app/views/devise/registrations/new.html.erb:11: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:11: Can't assign to true
+app/views/devise/registrations/new.html.erb:12: Can't assign to true
+app/views/devise/registrations/new.html.erb:11: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:11: Can't assign to true
+app/views/devise/registrations/new.html.erb:12: Can't assign to true
+app/views/devise/registrations/new.html.erb:11: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:11: Can't assign to true
+app/views/devise/registrations/new.html.erb:12: Can't assign to true
+app/views/devise/registrations/new.html.erb:11: syntax error, unexpected ':', expecting ')'
+app/views/devise/registrations/new.html.erb:11: Can't assign to true
+app/views/devise/registrations/new.html.erb:12: Can't assign to true
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:39:32 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 1.4ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1796)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1881)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 3091)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+     7:         <div class="form-inputs p-1 m-2">
+     8:           <div id="name-inputs">
+     9:             <div>
+    10:             <%= f.input :name, "No,bre",
+    11:                         required: true,
+    12:                         autofocus: true,
+    13:                         input_html: { autocomplete: "John", class: "input-design"}%>
+  
+app/views/devise/registrations/new.html.erb:10
+app/views/devise/registrations/new.html.erb:5
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:39:32 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1214)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1293)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1881)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+     7:         <div class="form-inputs p-1 m-2">
+     8:           <div id="name-inputs">
+     9:             <div>
+    10:             <%= f.input :name, "No,bre",
+    11:                         required: true,
+    12:                         autofocus: true,
+    13:                         input_html: { autocomplete: "John", class: "input-design"}%>
+  
+app/views/devise/registrations/new.html.erb:10
+app/views/devise/registrations/new.html.erb:5
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:39:38 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 5812)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5897)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 7010)
+
+
+  
+ActionView::Template::Error (wrong constant name No,breInput
+
+      at.const_get(mapping) if at.const_defined?(mapping)
+                                 ^^^^^^^^^^^^^^^):
+     7:         <div class="form-inputs p-1 m-2">
+     8:           <div id="name-inputs">
+     9:             <div>
+    10:             <%= f.input :name, as:"No,bre",
+    11:                         required: true,
+    12:                         autofocus: true,
+    13:                         input_html: { autocomplete: "John", class: "input-design"}%>
+  
+app/views/devise/registrations/new.html.erb:10
+app/views/devise/registrations/new.html.erb:5
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:39:45 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3742)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 12873)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 14109)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:40:17 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3564)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 12698)
+Completed 200 OK in 23ms (Views: 21.8ms | Allocations: 13926)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:40:41 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3579)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 12529)
+Completed 200 OK in 14ms (Views: 13.2ms | Allocations: 13744)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-02 17:41:07 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.7ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3564)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 12515)
+Completed 200 OK in 25ms (Views: 23.1ms | Allocations: 13737)
+
+
