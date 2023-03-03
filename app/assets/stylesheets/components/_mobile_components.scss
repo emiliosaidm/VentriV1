@@ -1,0 +1,51 @@
+.logo-header{
+  background-color: #000000;
+  height: 250px;
+}
+
+.text-logo{
+  color:white;
+  font-family: $headers-font;
+  font-weight: 800;
+  font-size: 50px;
+}
+label{
+  font-family: $body-font;
+  font-size: 20px;
+}
+.input-design{
+  font-size: 18px;
+  background-color: none;
+  border: none;
+  border-bottom: 1px solid black;
+  outline:none;
+}
+.btn-main-dark{
+  background-color: #000000;
+  color: white;
+  font-family: $body-font;
+  font-size: 18px;
+}
+
+.big-header{
+  text-align: center;
+  font-family: $headers-font;
+  font-size: 32px;
+  padding: 20px;
+}
+
+#name-inputs{
+  display:flex;
+}
+
+.link-design{
+  color:black;
+  font-family: $headers-font;
+}
+.link-design:visited,:active{
+  color:black;
+}
+
+.card-select-interest{
+  background-color: $ventri_gray;
+}

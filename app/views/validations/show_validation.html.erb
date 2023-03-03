@@ -1,7 +1,24 @@
 <!-- Mobile view -->
 <div class = "show-on-mobile-login">
   <%= render "components_mobile/header_logo" %>
-    <div class="container p-3 mt-2 d-flex flex-column align-items-center">
-    <h2>Ventri te interesa para</h2>
+    <div class="container p-3 mt-2 d-flex flex-column align-items-center justify-content-between" style="height: 50vh;">
+      <h2>Ventri te interesa para</h2>
+     <%= link_to user_validate_data_path(role: "driver"), style: "color:black; text-decoration:none", class:"w-75" do %>
+
+        <div class="card-select-interest d-flex flex-column align-items-center justify-content-center w-100 p-3 m-2">
+          <h4>Rentar Autos</h4>
+          <span style="font-size:50px"><i class="fa-solid fa-car"></i></span>
+        </div>
+
+      <% end %>
+
+      <%= link_to user_validate_data_path(role: "host"), style: "color:black; text-decoration:none", class:"w-75" do %>
+
+        <div class="card-select-interest d-flex flex-column justify-content-center align-items-center w-100 p-3 m-2">
+          <h4>Ser Anfitrión</h4>
+          <span style="font-size:50px"><i class="fa-solid fa-user"></i></span>
+        </div>
+
+      <% end %>
     </div>
 </div>
