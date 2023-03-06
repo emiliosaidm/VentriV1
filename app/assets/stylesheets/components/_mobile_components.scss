@@ -11,7 +11,7 @@
 }
 label{
   font-family: $body-font;
-  font-size: 20px;
+  font-size: 18px;
 }
 .input-design{
   font-size: 18px;
@@ -19,6 +19,7 @@ label{
   border: none;
   border-bottom: 1px solid black;
   outline:none;
+  background-color: transparent;
 }
 .btn-main-dark{
   background-color: #000000;
@@ -34,7 +35,7 @@ label{
   padding: 20px;
 }
 
-#name-inputs{
+.name-inputs{
   display:flex;
 }
 
@@ -48,4 +49,11 @@ label{
 
 .card-select-interest{
   background-color: $ventri_gray;
+}
+.mobile-data-table{
+  background-color: $ventri_gray;
+  border-radius: 10px;
+}
+.mobile-data-table tr{
+  border-bottom: 0.4px solid white;
 }

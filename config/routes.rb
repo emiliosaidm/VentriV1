@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   #Validations Routes
   get "validations", to: "validations#show_validation", as: "validations"
   get "validations/user_data", to: "validations#show_validation_user_data", as: "user_validate_data"
-  # patch "validations", to: "update_user_info"
+  patch "validations", to: "validations#update_user_info", as: "update_user_info"
 end
