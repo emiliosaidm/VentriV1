@@ -1,0 +1,34 @@
+<%= render "components_mobile/navbar" %>
+<div class="container">
+  <h1>Agrega un auto</h1>
+  <%= simple_form_for([@car]) do |f| %>
+        <div class="form-imputs">
+        <%= f.input :make
+                    label:"Marca",
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "Tesla", class: "input-design"} %>
+
+        <%= f.input :model,
+                    label:"Version",
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "Tesla", class: "input-design"} %>
+
+        <%= f.input :year,
+                    label:"Ano",
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "2022", class: "input-design"} %>
+
+
+        </div>
+
+        <%= f.input :category %>
+        <%= f.input :brand %>
+        <%= f.input :description %>
+        <%= f.input :availability %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.submit class: "btn btn-dark"%>
+      <% end %>
+</div>

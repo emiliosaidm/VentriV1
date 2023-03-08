@@ -15635,3 +15635,514 @@ Processing by ValidationsController#show_validation_user_data as HTML
 Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 15419)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3807692464008009780)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3807692464008009780)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (49.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "VentriV1_development"[0m
+  [1m[35m (23.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "VentriV1_test"[0m
+  [1m[35m (200.9ms)[0m  [1m[35mCREATE DATABASE "VentriV1_development" ENCODING = 'unicode'[0m
+  [1m[35m (65.3ms)[0m  [1m[35mCREATE DATABASE "VentriV1_test" ENCODING = 'unicode'[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3807692464008009780)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20230227215535)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "first_name" character varying DEFAULT '' NOT NULL, "last_names" character varying DEFAULT '' NOT NULL, "phone_number" character varying, "date_of_birth" date, "gender" character varying, "driver_verified" integer DEFAULT 0 NOT NULL, "host_verified" integer DEFAULT 0 NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227215535"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAddresses (20230227220010)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" bigserial primary key, "user_id" bigint NOT NULL, "street" character varying, "state" character varying, "city" character varying, "zip_code" character varying, "country" character varying, "neighborhood" character varying, "exterior_number" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_48c9e0c5a2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227220010"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserReviews (20230227220417)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "user_reviews" ("id" bigserial primary key, "stars" integer, "description" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_f526f8a17a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_user_reviews_on_user_id" ON "user_reviews" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227220417"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEmergencyContacts (20230227220525)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "emergency_contacts" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "phone_number" character varying, "relationship" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_8104b3f11d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE INDEX "index_emergency_contacts_on_user_id" ON "emergency_contacts" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227220525"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCars (20230227221039)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "cars" ("id" bigserial primary key, "user_id" bigint NOT NULL, "car_approved" integer, "niv" character varying, "make" character varying, "model" character varying, "year" character varying, "engine" character varying, "transmission" character varying, "gas_type" character varying, "doors" integer, "seats" integer, "price" float, "unlimited_distance" boolean, "extra_km_price" float, "description" character varying, "max_distance" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_7eccb46500"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_cars_on_user_id" ON "cars" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227221039"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLocationAddresses (20230227221427)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "location_addresses" ("id" bigserial primary key, "street" character varying, "city" character varying, "zip_code" character varying, "state" character varying, "country" character varying, "neighborhood" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227221427"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePickUpLocations (20230227221616)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "pick_up_locations" ("id" bigserial primary key, "price_of_location" float, "location_address_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_bc1fff79a2"
+FOREIGN KEY ("location_address_id")
+  REFERENCES "location_addresses" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_pick_up_locations_on_location_address_id" ON "pick_up_locations" ("location_address_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227221616"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCarPickUpLocations (20230227221728)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "car_pick_up_locations" ("id" bigserial primary key, "car_id" bigint NOT NULL, "pick_up_location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_5d5a6d8f3b"
+FOREIGN KEY ("car_id")
+  REFERENCES "cars" ("id")
+, CONSTRAINT "fk_rails_d239025c6d"
+FOREIGN KEY ("pick_up_location_id")
+  REFERENCES "pick_up_locations" ("id")
+)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_car_pick_up_locations_on_car_id" ON "car_pick_up_locations" ("car_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_car_pick_up_locations_on_pick_up_location_id" ON "car_pick_up_locations" ("pick_up_location_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227221728"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRentals (20230227222012)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "rentals" ("id" bigserial primary key, "car_id" bigint NOT NULL, "user_id" bigint NOT NULL, "start_date" date, "end_date" date, "host_accepted" boolean, "pick_up_locations_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_65a0e99a95"
+FOREIGN KEY ("car_id")
+  REFERENCES "cars" ("id")
+, CONSTRAINT "fk_rails_2c7010c082"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_0352009f89"
+FOREIGN KEY ("pick_up_locations_id")
+  REFERENCES "pick_up_locations" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_rentals_on_car_id" ON "rentals" ("car_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_rentals_on_user_id" ON "rentals" ("user_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_rentals_on_pick_up_locations_id" ON "rentals" ("pick_up_locations_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227222012"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRentalDrivers (20230227222251)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "rental_drivers" ("id" bigserial primary key, "rental_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1467e2c17e"
+FOREIGN KEY ("rental_id")
+  REFERENCES "rentals" ("id")
+, CONSTRAINT "fk_rails_4608446d74"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE INDEX "index_rental_drivers_on_rental_id" ON "rental_drivers" ("rental_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_rental_drivers_on_user_id" ON "rental_drivers" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227222251"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCarReviews (20230227225418)
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "car_reviews" ("id" bigserial primary key, "stars" integer, "description" character varying, "car_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_36d55ed7f3"
+FOREIGN KEY ("car_id")
+  REFERENCES "cars" ("id")
+, CONSTRAINT "fk_rails_fc3901c0c0"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_car_reviews_on_car_id" ON "car_reviews" ("car_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_car_reviews_on_user_id" ON "car_reviews" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227225418"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-07 23:32:57.163049"], ["updated_at", "2023-03-07 23:32:57.163049"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3807692464008009780)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2023-03-07 23:33:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 11842)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 210)
+  Rendered layout layouts/application.html.erb (Duration: 82.3ms | Allocations: 63623)
+Completed 200 OK in 98ms (Views: 85.0ms | ActiveRecord: 5.1ms | Allocations: 76540)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-03-07 23:33:42 +0000
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered components_mobile/_header_logo.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3023)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 11380)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 12185)
+
+
+Started POST "/users" for ::1 at 2023-03-07 23:34:03 +0000
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Isky", "last_names"=>"Galb", "email"=>"ijg@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Continuar"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ijg@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_names", "phone_number", "date_of_birth", "gender", "driver_verified", "host_verified", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["email", "ijg@gmail.com"], ["first_name", "Isky"], ["last_names", "Galb"], ["phone_number", nil], ["date_of_birth", nil], ["gender", nil], ["driver_verified", 0], ["host_verified", 0], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-03-07 23:34:03.524688"], ["updated_at", "2023-03-07 23:34:03.524688"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://[::1]:3000/
+Completed 303 See Other in 292ms (ActiveRecord: 7.7ms | Allocations: 10778)
+
+
+Started GET "/" for ::1 at 2023-03-07 23:34:03 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 108)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 46)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 8930)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 9742)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:34:14 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 108)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 8608)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.6ms | Allocations: 11280)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:40:49 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2677)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2765)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 10.8ms | Allocations: 8178)
+
+
+  
+ActionView::Template::Error (Missing partial components_mobile/__navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/user/Desktop/Ventri/VentriV1/app/views"
+  * "/Users/user/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/devise-4.9.0/app/views"
+  * "/Users/user/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4.2/app/views"
+  * "/Users/user/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4.2/app/views"
+
+Did you mean?  components_mobile/navbar
+               components_mobile/header_logo
+               components_mobile/social_media_footer
+               shared/navbar
+               active_storage/blobs/blob
+               action_text/attachables/missing_attachable):
+    1: <%= render "components_mobile/_navbar" %>
+  
+app/views/cars/new.html.erb:1
+Started GET "/cars/new" for ::1 at 2023-03-07 23:42:01 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.6ms | Allocations: 91)
+  Rendered cars/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 338)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 9411)
+Completed 200 OK in 33ms (Views: 22.6ms | ActiveRecord: 0.6ms | Allocations: 11804)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:42:27 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 335)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 9407)
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 0.6ms | Allocations: 11778)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:47:36 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered cars/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 335)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 3331.3ms | Allocations: 74935)
+Completed 200 OK in 3337ms (Views: 3332.4ms | ActiveRecord: 0.7ms | Allocations: 77279)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:48:48 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered cars/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 336)
+  Rendered layout layouts/application.html.erb (Duration: 437.1ms | Allocations: 28995)
+Completed 500 Internal Server Error in 446ms (ActiveRecord: 1.2ms | Allocations: 31332)
+
+
+  
+ActionView::Template::Error (Error: property "display-flex" must be followed by a ':'
+        on line 2:3 of app/assets/stylesheets/components/_navbar.scss
+        from line 5:1 of app/assets/stylesheets/components/_index.scss
+        from line 11:1 of app/assets/stylesheets/application.scss
+>>   display-flex;
+
+   --^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/components/_navbar.scss:2
+app/views/layouts/application.html.erb:9
+Started GET "/cars/new" for ::1 at 2023-03-07 23:48:58 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 3129.6ms | Allocations: 73892)
+Completed 200 OK in 3139ms (Views: 3130.3ms | ActiveRecord: 1.2ms | Allocations: 75724)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:50:27 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3128.8ms | Allocations: 73380)
+Completed 200 OK in 3136ms (Views: 3129.3ms | ActiveRecord: 0.5ms | Allocations: 75002)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:50:36 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 8324)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 9946)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:50:58 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3174.5ms | Allocations: 73380)
+Completed 200 OK in 3179ms (Views: 3175.2ms | ActiveRecord: 0.4ms | Allocations: 75011)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:52:19 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered cars/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 340)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 3121.7ms | Allocations: 74525)
+Completed 200 OK in 3136ms (Views: 3125.8ms | ActiveRecord: 0.7ms | Allocations: 76699)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:53:20 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3123.9ms | Allocations: 73392)
+Completed 200 OK in 3128ms (Views: 3124.3ms | ActiveRecord: 0.3ms | Allocations: 75200)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:53:48 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3118.1ms | Allocations: 73391)
+Completed 200 OK in 3131ms (Views: 3119.0ms | ActiveRecord: 3.2ms | Allocations: 74992)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:54:44 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3148.3ms | Allocations: 73388)
+Completed 200 OK in 3158ms (Views: 3149.2ms | ActiveRecord: 0.8ms | Allocations: 75004)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:57:24 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3129.0ms | Allocations: 73394)
+Completed 200 OK in 3134ms (Views: 3129.5ms | ActiveRecord: 0.4ms | Allocations: 75014)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:58:48 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3119.6ms | Allocations: 73401)
+Completed 200 OK in 3124ms (Views: 3120.0ms | ActiveRecord: 0.5ms | Allocations: 75036)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-07 23:59:47 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3124.6ms | Allocations: 73390)
+Completed 200 OK in 3132ms (Views: 3125.4ms | ActiveRecord: 0.5ms | Allocations: 75013)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-08 00:01:57 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3136.1ms | Allocations: 73398)
+Completed 200 OK in 3144ms (Views: 3137.0ms | ActiveRecord: 0.5ms | Allocations: 75027)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-08 00:02:25 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3145.4ms | Allocations: 73421)
+Completed 200 OK in 3150ms (Views: 3145.8ms | ActiveRecord: 0.3ms | Allocations: 75043)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-08 00:03:00 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3124.6ms | Allocations: 73416)
+Completed 200 OK in 3134ms (Views: 3125.5ms | ActiveRecord: 0.4ms | Allocations: 75050)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-08 00:03:38 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3116.9ms | Allocations: 73412)
+Completed 200 OK in 3124ms (Views: 3117.4ms | ActiveRecord: 0.4ms | Allocations: 75035)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-03-08 00:05:22 +0000
+Processing by Devise::SessionsController#new as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://[::1]:3000/cars/new
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 2051)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-08 00:05:22 +0000
+Processing by CarsController#new as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 80)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 3197.1ms | Allocations: 73765)
+Completed 200 OK in 3199ms (Views: 3197.4ms | ActiveRecord: 0.2ms | Allocations: 75527)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-08 00:05:25 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 8324)
+Completed 200 OK in 36ms (Views: 31.1ms | ActiveRecord: 0.4ms | Allocations: 9930)
+
+
+Started GET "/cars/new" for ::1 at 2023-03-08 00:05:47 +0000
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered cars/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3139.3ms | Allocations: 73419)
+Completed 200 OK in 3149ms (Views: 3142.4ms | ActiveRecord: 0.4ms | Allocations: 75052)
+
+
