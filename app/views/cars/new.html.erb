@@ -1,0 +1,63 @@
+<div class = "show-on-mobile-login">
+<%= render "components_mobile/navbar" %>
+
+  <div style="height: 30px">
+  </div>
+
+  <div class="container">
+    <h1>Agrega un auto</h1>
+    <%= simple_form_for([@car]) do |f| %>
+          <div class="form-imputs">
+            <%= f.input :make,
+                        label:"Marca",
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "Tesla", class: "input-design"} %>
+
+            <%= f.input :model,
+                        label:"Versiõn",
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "Model S", class: "input-design"} %>
+
+            <%= f.input :year,
+                        label:"Año",
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "2022", class: "input-design"} %>
+
+            <%= f.input :niv,
+                        label:"Niv",
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "niv", class: "input-design"} %>
+
+            <%= f.input :price,
+                        label:"Precio/dia",
+                        required: true,
+                        autofocus: true,
+                        input_html: {class: "input-design"} %>
+
+            <%=f.label "Transmisión"%>
+            <br>
+            <%=f.select(:transmission,options_for_select([['Automático','AUTOMATIC', {class: "input-design"}], ['Manual','MANUAL']]))%>
+            <hr>
+            <%=f.label "Puertas"%>
+            <br>
+            <%=f.select(:doors,options_for_select([['1',1], ['2',2], ['3',3],['4',4],['5',5]]))%>
+            <hr>
+            <%=f.label "Asientos"%>
+            <br>
+            <%=f.select(:doors,options_for_select([['1',1], ['2',2], ['3',3],['4',4],['5',5],['6',6],['7',7],['8',8]]))%>
+            <hr>
+            <%=f.label 'Descripción'%>
+            <br>
+            <%= f.text_area :description, cols: 35, rows: 5, class: "input-design" %>
+            <%= f.input :photo, as: :file %>
+            <div class="form-actions d-flex w-100 flex-column align-items-center mb-3">
+              <%= f.button :submit, "Continuar", class: "btn btn-main-dark mt-2 w-100" %>
+            </div>
+          </div>
+    <% end %>
+  </div>
+</div>
