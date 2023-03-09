@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'cars/index'
-  get 'cars/show'
-  get 'cars/edit'
-  get 'cars/new'
+  resources :cars
   devise_for :users, controllers: {registrations: :registrations}
   root to: "pages#home"
   #Validations Routes
