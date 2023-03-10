@@ -20,6 +20,7 @@ class CarsController < ApplicationController
   end
 
   def index
+    @cars = Car.all
   end
 
   private
