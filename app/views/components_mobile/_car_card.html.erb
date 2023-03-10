@@ -1,12 +1,12 @@
 <% photo = car.photo %>
-<div style="border: 1px solid grey; width: 360px; border-radius: 5px 5px 5px 5px; margin: 20px auto;">
+<div style="border: 1px solid grey; width: 360px; border-radius: 7px 7px 7px 7px; margin: 20px auto;">
   <div width=80vw style="display: flex; justify-content:center;">
     <div style="text-align: center;">
       <div>
         <% if car.photo.attached?%>
-          <%= cl_image_tag photo.key, width: 360, height: 250, crop: :fill, style:"border-radius: 5px 5px 0px 0px; " %>
+          <%= cl_image_tag photo.key, width: 360, height: 250, crop: :fill, style:"border-radius: 7px 7px 0px 0px; " %>
         <% else %>
-          <img src="https://www.fintelgaseluce.it/wp-content/uploads/2015/07/FEG-facebook-placeholder_shop.png" style="height: 250px; width: 360px; border-radius: 5px 5px 0px 0px"/>
+          <img src="https://www.fintelgaseluce.it/wp-content/uploads/2015/07/FEG-facebook-placeholder_shop.png" style="height: 250px; width: 360px; border-radius: 7px 7px 0px 0px"/>
         <% end %>
       </div>
       <h1 style="font-weight: 700; font-size:21px; font-family: nunito, helvetica, sans-serif; margin-top:15px;"><%=car.make%> <%=car.model%> <%=car.year%></h1>
