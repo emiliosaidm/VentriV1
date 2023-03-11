@@ -1,0 +1,35 @@
+<div data-validate-users-target = "emergencyContact">
+  <%= simple_form_for(emergency_contact, url: "", data: {validate_users_target: "emergencyContactForm", action: "submit -> validate-users#updateEmergencyContact"}) do |f| %>
+  <div class="name-inputs">
+      <div class="me-2">
+      <%= f.input :first_name,
+                  label:"Nombre",
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "John", class: "input-design"}%>
+      </div>
+      <div>
+        <%= f.input :last_name,
+                  label:"Apellidos",
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "Hancock", class: "input-design" }%>
+      </div>
+      </div>
+        <%= f.input :phone_number,
+                        label:"Número de teléfono",
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "Hancock", class: "input-design" }%>
+        <%= f.input :relationship,
+                        label:"Parentesco",
+                        required: true,
+                        autofocus: true,
+                        hint: "Estos datos los pedimos en caso de un percance o como una alternativa de contacto hacia ti.",
+                        input_html: { autocomplete: "Hancock", class: "input-design" }%>
+
+    <div class="form-actions d-flex w-100 flex-column align-items-center">
+      <%= f.button :submit, "Siguiente", class: "btn btn-main-dark w-50" %>
+    </div>
+  <% end %>
+</div>

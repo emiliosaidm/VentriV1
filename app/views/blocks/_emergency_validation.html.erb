@@ -1,0 +1,17 @@
+ <div class="alert alert-secondary" data-validate-users-target="reviewAddress" role="alert">
+  <p>
+    <i class="fa-solid fa-check"></i><b> Nombre:</b> <%= user.emergency_contact.first_name %>
+  </p>
+  <p>
+    <i class="fa-solid fa-check"></i><b> Apellidos:</b> <%= user.emergency_contact.last_name %>
+  </p>
+  <p>
+    <i class="fa-solid fa-check"></i><b> Número de Teléfono:</b> <%= user.emergency_contact.phone_number %>
+  </p>
+  <p>
+    <i class="fa-solid fa-check"></i><b> Parentesco:</b> <%= user.emergency_contact.relationship %>
+  </p>
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <a data-action= "click->validate-users#showEmergencyContactValidationForm">Editar <i class="fa-solid fa-pencil"></i></a>
+  </div>
+</div>

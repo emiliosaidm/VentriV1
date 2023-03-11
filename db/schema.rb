@@ -99,7 +99,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_140917) do
   end
 
   create_table "emergency_contacts", force: :cascade do |t|
-    t.string "name"
+    t.string "first_name"
     t.string "last_name"
     t.string "phone_number"
     t.string "relationship"
@@ -164,6 +164,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_140917) do
     t.string "email", default: "", null: false
     t.string "first_name", default: "", null: false
     t.string "last_names", default: "", null: false
+    t.string "nationality"
     t.string "phone_number"
     t.date "date_of_birth"
     t.string "gender"

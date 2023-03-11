@@ -1,0 +1,20 @@
+ <div class="alert alert-secondary" data-validate-users-target="reviewAddress" role="alert">
+  <p>
+    <i class="fa-solid fa-check"></i><b> Calle:</b> <%= user.address.street %>
+  </p>
+  <p>
+    <i class="fa-solid fa-check"></i><b> Ciudad:</b> <%= user.address.city %>
+  </p>
+  <p>
+    <i class="fa-solid fa-check"></i><b> Estado:</b> <%= user.address.state %>
+  </p>
+  <p>
+    <i class="fa-solid fa-check"></i><b> Código Postal:</b> <%= user.address.zip_code %>
+  </p>
+  <p>
+  <i class="fa-solid fa-check"></i><b> Colonia:</b> <%= user.address.neighborhood %>
+  </p>
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <a data-action= "click->validate-users#showAddressValidationForm">Editar <i class="fa-solid fa-pencil"></i></a>
+  </div>
+</div>

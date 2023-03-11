@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :cars
   has_one :emergency_contact
+  has_one :address
   has_many :car_reviews
   has_many :rentals
 end
