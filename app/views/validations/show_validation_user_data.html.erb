@@ -1,120 +1,61 @@
 <!-- Mobile view -->
-<div class = "show-on-mobile-login">
+<div class = "show-on-mobile-login" data-controller="validate-users">
   <%= render "components_mobile/header_logo" %>
     <div class="container p-3">
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <h4>Vamos a verificar algunos datos</h4>
-        <br>
-      </div>
+        <div class="alert alert-secondary" role="alert">
+          <h4 style="text-align:center">Vamos a verificar algunos datos</h4>
+          <p>
+            Tus datos serán procesados y si son aprobados serás candidato o candidata a publicar vehiculos
+            y rentarlos.
+          </p>
+          <div class="d-flex flex-column align-items-center">
+            <a class="btn btn-main-dark" data-validate-users-target= "startButton" data-action="click -> validate-users#startValidation"> Empezar</a>
+          </div>
+        </div>
       <table class="mobile-data-table w-100">
         <tr>
           <td class="p-3">
-          <%= simple_form_for(@user, url: update_user_info_path, method: :patch) do |f| %>
-              <h5>Valida tu nombre y apellido</h5>
-              <div class="name-inputs">
-                <div class="me-2">
-                <%= f.input :first_name,
-                            label:"Nombre",
-                            required: true,
-                            autofocus: true,
-                            input_html: { autocomplete: "John", class: "input-design"}%>
-                </div>
-                <div>
-                  <%= f.input :last_names,
-                            label:"Apellidos",
-                            required: true,
-                            autofocus: true,
-                            input_html: { autocomplete: "Hancock", class: "input-design" }%>
-                </div>
-              </div>
-                  <%= f.input :gender,
-                          collection: ["Hombre", "Mujer"],
-                          label:"Género",
-                          required: true,
-                          autofocus: true,
-                          hint: "Este campo es necesario por procesos con la aseguradora.",
-                          input_html: { autocomplete: "Hancock", class: "input-design" }%>
-                <%= f.input :phone_number,
-                              label:"Número de teléfono",
-                              required: true,
-                              autofocus: true,
-                              input_html: { autocomplete: "Hancock", class: "input-design" }%>
-            <div class="form-actions d-flex w-100 flex-column align-items-center">
-              <%= f.button :submit, "Siguiente", class: "btn btn-main-dark w-50 " %>
-            </div>
-          <% end %>
+              <h5><b>Nombre y Apellidos</b></h5>
+              <%= render partial: "mobile_forms/name_validation_form", locals: {user: @user} %>
           </td>
         </tr>
         <tr>
           <td class="p-3">
-            <%= simple_form_for(@address, url: update_user_info_path, method: :patch) do |f| %>
-              <h5>Dirección</h5>
-              <%= f.input :street,
-                              label: "Calle",
-                              autofocus: true,
-                              input_html: { autocomplete: "Hancock", class: "input-design" }%>
-              <div class="name-inputs">
-                <div class="me-2">
-                <%= f.input :city,
-                            label:"Ciudad",
-                            required: true,
-                            autofocus: true,
-                            input_html: { autocomplete: "John", class: "input-design"}%>
-                </div>
-                <div>
-                  <%= f.input :state,
-                            label:"Estado",
-                            required: true,
-                            autofocus: true,
-                            input_html: { autocomplete: "Hancock", class: "input-design" }%>
-                </div>
-              </div>
-
-              <div class="name-inputs">
-                <div class="me-2">
-                <%= f.input :zip_code,
-                            label:"Código Postal",
-                            required: true,
-                            autofocus: true,
-                            input_html: { autocomplete: "John", class: "input-design"}%>
-                </div>
-                <div>
-                  <%= f.input :neighborhood,
-                            label:"Colonia",
-                            required: true,
-                            autofocus: true,
-                            input_html: { autocomplete: "Hancock", class: "input-design" }%>
-                </div>
-              </div>
-             <div class="form-actions d-flex w-100 flex-column align-items-center">
-              <%= f.button :submit, "Siguiente", class: "btn btn-main-dark w-50 " %>
-            </div>
-
+            <h5><b>Dirección</b></h5>
+            <%= render partial: "mobile_forms/address_form", locals: {address: @address} %>
+          </td>
+        </tr>
+        <tr>
+          <td class="p-3">
+            <h5><b>Contacto de emergencia</b></h5>
+            <%= render partial: "mobile_forms/emergency_contact_form",
+                       locals: {emergency_contact: @emergency_contact} %>
+          </td>
+        </tr>
+        <tr>
+          <td class="p-3">
+            <h5><b>Pasaporte o INE</b></h5>
+            <% if current_user.nationality == "México" %>
+              <%= render partial: "mobile_forms/id_form" %>
+            <% else %>
+              <%= render partial: "mobile_forms/id_nonmexican_form" %>
             <% end %>
           </td>
         </tr>
         <tr>
           <td class="p-3">
-            <h5>Contacto de emergencia</h5>
-
+            <h5><b>Licencia de conducir</b></h5>
+            <%= render partial: "mobile_forms/licence_form" %>
           </td>
         </tr>
         <tr>
           <td class="p-3">
-            <h5>Pasaporte o INE</h5>
-          </td>
-        </tr>
-        <tr>
-          <td class="p-3">
-            <h5>Licencia de conducir</h5>
-          </td>
-        </tr>
-        <tr>
-          <td class="p-3">
-            <h5>Foto de perfil</h5>
+            <h5><b>Foto de perfil</b></h5>
+            <%= render partial: "mobile_forms/profile_form" %>
           </td>
         </tr>
       </table>
   </div>
   <br>
 </div>
+<!-- End of Mobile View-->

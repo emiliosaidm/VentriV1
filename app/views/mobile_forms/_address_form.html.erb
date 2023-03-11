@@ -1,0 +1,46 @@
+<div data-validate-users-target = "address">
+  <%= simple_form_for(address, url: "", data: {validate_users_target:"addressForm", action: "submit->validate-users#updateAddress"}, method: :patch) do |f| %>
+  <p>Tu dirección debe de ser igual a la de la identificación oficial.</p>
+    <%= f.input :street,
+                    label: "Calle",
+                    autofocus: true,
+                    input_html: { autocomplete: "Hancock", class: "input-design" }%>
+    <div class="name-inputs">
+      <div class="me-2">
+      <%= f.input :city,
+                  label:"Ciudad",
+                  collection: Address.countries_collection,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "John", class: "input-design"}%>
+      </div>
+      <div>
+        <%= f.input :state,
+                  label:"Estado",
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "Hancock", class: "input-design" }%>
+      </div>
+      </div>
+
+      <div class="name-inputs">
+        <div class="me-2">
+        <%= f.input :zip_code,
+                    label:"Código Postal",
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "John", class: "input-design"}%>
+        </div>
+        <div>
+          <%= f.input :neighborhood,
+                    label:"Colonia",
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "Hancock", class: "input-design" }%>
+        </div>
+      </div>
+      <div class="form-actions d-flex w-100 flex-column align-items-center">
+      <%= f.button :submit, "Siguiente", class: "btn btn-main-dark w-50" %>
+    </div>
+  <% end %>
+</div>

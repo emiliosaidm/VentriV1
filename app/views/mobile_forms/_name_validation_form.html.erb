@@ -1,0 +1,46 @@
+<div data-validate-users-target="name">
+  <%= simple_form_for(user, url: "",data: { validate_users_target: "nameForm", action: "submit->validate-users#updateUser"}) do |f| %>
+  <div class="name-inputs">
+    <div class="me-2">
+    <%= f.input :first_name,
+                label:"Nombre",
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "John", class: "input-design"}%>
+    </div>
+    <div>
+      <%= f.input :last_names,
+                label:"Apellidos",
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Hancock", class: "input-design" }%>
+    </div>
+    </div>
+     <%= f.input :nationality,
+                label:"Nacionalidad",
+                collection: Address.countries_collection,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Hancock", class: "input-design" }%>
+      <%= f.input :gender,
+              collection: ["Hombre", "Mujer"],
+              label:"Género",
+              required: true,
+              autofocus: true,
+              hint: "Este campo es necesario por procesos con la aseguradora.",
+              input_html: { autocomplete: "Hancock", class: "input-design" }%>
+      <%= f.input :phone_number,
+                    label:"Número de teléfono",
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "Hancock", class: "input-design" }%>
+      <%= f.input :date_of_birth,
+                label:"Fecha de nacimiento",
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Hancock", class: "input-design" }%>
+    <div class="form-actions d-flex w-100 flex-column align-items-center">
+    <%= f.button :submit, "Siguiente", class: "btn btn-main-dark w-50 " %>
+    </div>
+  <% end %>
+</div>
