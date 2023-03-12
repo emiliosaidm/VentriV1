@@ -38,17 +38,21 @@
                         autofocus: true,
                         input_html: {class: "input-design"} %>
 
+            <%=f.label "Motor"%>
+            <br>
+            <%=f.select(:engine, options_for_select([['Gasolina','Gasonlina'], ['Gasóleo','Gasoleo'],['Electrico','Electrico']]))%>
+            <hr>
             <%=f.label "Transmisión"%>
             <br>
-            <%=f.select(:transmission,options_for_select([['Automático','AUTOMATIC', {class: "input-design"}], ['Manual','MANUAL']]))%>
+            <%=f.select(:transmission, options_for_select([['Automático','Automático'], ['Manual','Manual']]))%>
             <hr>
             <%=f.label "Puertas"%>
             <br>
-            <%=f.select(:doors,options_for_select([['1',1], ['2',2], ['3',3],['4',4],['5',5]]))%>
+            <%=f.select(:doors, options_for_select([['1',1], ['2',2], ['3',3],['4',4],['5',5]]))%>
             <hr>
             <%=f.label "Asientos"%>
             <br>
-            <%=f.select(:doors,options_for_select([['1',1], ['2',2], ['3',3],['4',4],['5',5],['6',6],['7',7],['8',8]]))%>
+            <%=f.select(:seats, options_for_select([['1',1], ['2',2], ['3',3],['4',4],['5',5],['6',6],['7',7],['8',8]]))%>
             <hr>
             <%=f.label 'Descripción'%>
             <br>
