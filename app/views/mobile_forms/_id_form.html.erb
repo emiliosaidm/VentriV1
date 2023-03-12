@@ -1,18 +1,17 @@
  <div data-validate-users-target="id">
-  <div class="alert alert-warning" role="alert">
-    <h5 class="alert-heading"><b>Como eres ciudadano mexicano</b></h5>
-    <p>
-    Adjunta una foto frontal y trasera de alguna de las siguintes opciones:
-    <ul>
-      <li>Credencial para votar</li>
-      <li>Credencial para votar desde el extranjero</li>
-      <li>Visa de residencia permanente</li>
-      <li>Matrícula Consular</li>
-    </ul>
-    </p>
-  </div>
-  <div class="d-flex flex-column justify-content-center align-items-center">
-    <input class="form-control mb-2" type="file" id="licence" multiple />
-    <button class= "btn btn-main-dark w-50">Siguiente</button>
-  </div>
+  <%= simple_form_for(mexican_id, url: "", data: {validate_users_target:"addressForm", action: "submit->validate-users#updateAddress"}, method: :patch) do |f| %>
+    <div class="alert alert-warning" role="alert">
+      <h5 class="alert-heading"><b>Como eres ciudadano mexicano</b></h5>
+      <p>
+      Adjunta una foto frontal y trasera de alguna de las siguintes opciones:
+      </p>
+    </div>
+    <%=f.select(:type,options_for_select([['Credencial para votar',"Credencial para votar"],
+                                         ['Credencial para votar desde el extranjero',"Credencial para votar desde el extranjero"],
+                                          ['Visa de residencia permanente',"Visa de residencia permanente"],
+                                          ['Matrícula Circular',"Matrícula Circular"]]))%>
+    <div class="form-actions d-flex w-100 flex-column align-items-center">
+      <%= f.button :submit, "Siguiente", class: "btn btn-main-dark w-50" %>
+    </div>
+  <% end %>
 </div>
