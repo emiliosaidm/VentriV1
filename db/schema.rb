@@ -181,7 +181,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_11_212740) do
     t.string "last_names", default: "", null: false
     t.string "nationality", default: "México"
     t.string "phone_number", default: "+52"
-    t.date "date_of_birth", default: "2023-03-11"
+    t.date "date_of_birth", default: "2023-03-12"
     t.string "gender", default: "Mujer"
     t.integer "driver_verified", default: 0, null: false
     t.integer "host_verified", default: 0, null: false

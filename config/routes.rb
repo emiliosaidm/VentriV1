@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :cars
+  resources :cars do
+    resources :rentals
+  end
   devise_for :users, controllers: {registrations: :registrations}
   root to: "pages#home"
   #Validations Routes
