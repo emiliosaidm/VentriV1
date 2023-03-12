@@ -45128,3 +45128,585 @@ Processing by CarsController#edit as HTML
 Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 10196)
 
 
+Started GET "/cars" for ::1 at 2023-03-12 17:05:14 +0000
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/index.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCar Load (2.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:4:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.4ms | Allocations: 1889)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.1ms | Allocations: 1560)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.5ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.2ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.2ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.1ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.1ms | Allocations: 2516)
+  [1m[36mActiveStorage::Attachment Load (3.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 5.2ms | Allocations: 2518)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.3ms | Allocations: 2590)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (2.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 4.8ms | Allocations: 2518)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 4.7ms | Allocations: 2518)
+  Rendered components_mobile/_sticky_footer.html.erb (Duration: 0.4ms | Allocations: 89)
+  Rendered cars/index.html.erb within layouts/application (Duration: 34.5ms | Allocations: 24784)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 33350)
+Completed 200 OK in 45ms (Views: 30.6ms | ActiveRecord: 11.2ms | Allocations: 35036)
+
+
+Started GET "/cars/11" for ::1 at 2023-03-12 17:05:24 +0000
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cars/show.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:69
+  [1m[36mCar Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars" WHERE "cars"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/cars/show.html.erb:80
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_car_show_sticky_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered cars/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3655)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 12213)
+Completed 200 OK in 25ms (Views: 13.3ms | ActiveRecord: 2.2ms | Allocations: 14353)
+
+
+Started GET "/cars" for ::1 at 2023-03-12 17:06:08 +0000
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/index.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:4:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.3ms | Allocations: 1636)
+  [1m[36mActiveStorage::Attachment Load (4.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 5.9ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.4ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 3.2ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.3ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.3ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.6ms | Allocations: 2515)
+  [1m[36mActiveStorage::Attachment Load (2.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 5.2ms | Allocations: 2518)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.8ms | Allocations: 2590)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (2.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 4.0ms | Allocations: 2518)
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 4.0ms | Allocations: 2518)
+  Rendered components_mobile/_sticky_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cars/index.html.erb within layouts/application (Duration: 35.3ms | Allocations: 24119)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 32685)
+Completed 200 OK in 44ms (Views: 25.4ms | ActiveRecord: 16.3ms | Allocations: 34311)
+
+
+Started GET "/cars/11" for ::1 at 2023-03-12 17:06:13 +0000
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cars/show.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:69
+  [1m[36mCar Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars" WHERE "cars"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/cars/show.html.erb:80
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_car_show_sticky_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered cars/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3655)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 12219)
+Completed 200 OK in 25ms (Views: 10.7ms | ActiveRecord: 1.3ms | Allocations: 14354)
+
+
+Started GET "/cars" for ::1 at 2023-03-12 17:06:21 +0000
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/index.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:4:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 5.2ms | Allocations: 1636)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.3ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.4ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 3.3ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 8.3ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.8ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.9ms | Allocations: 2515)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 3.4ms | Allocations: 2518)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 3.3ms | Allocations: 2590)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 4.9ms | Allocations: 2518)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.7ms | Allocations: 2518)
+  Rendered components_mobile/_sticky_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cars/index.html.erb within layouts/application (Duration: 42.6ms | Allocations: 24119)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 32685)
+Completed 200 OK in 55ms (Views: 42.0ms | ActiveRecord: 6.8ms | Allocations: 34315)
+
+
+Started GET "/cars" for ::1 at 2023-03-12 17:07:43 +0000
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/index.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCar Load (1.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:4:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 7.5ms | Allocations: 1636)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.7ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.6ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 3.0ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.2ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.5ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (3.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 9.0ms | Allocations: 2515)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 5.2ms | Allocations: 2518)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 3.5ms | Allocations: 2590)
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 4.9ms | Allocations: 2518)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 3.3ms | Allocations: 2518)
+  Rendered components_mobile/_sticky_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cars/index.html.erb within layouts/application (Duration: 51.9ms | Allocations: 24119)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3301.5ms | Allocations: 100543)
+Completed 200 OK in 3317ms (Views: 3289.2ms | ActiveRecord: 13.8ms | Allocations: 102164)
+
+
+Started GET "/cars" for ::1 at 2023-03-12 17:09:00 +0000
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering cars/index.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:4:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 3.0ms | Allocations: 1636)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.3ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.3ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.7ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 1.6ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.1ms | Allocations: 1559)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.7ms | Allocations: 2515)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.8ms | Allocations: 2518)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.7ms | Allocations: 2590)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 2.2ms | Allocations: 2518)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/components_mobile/_car_card.html.erb:22
+  Rendered components_mobile/_car_card.html.erb (Duration: 11.4ms | Allocations: 2518)
+  Rendered components_mobile/_sticky_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cars/index.html.erb within layouts/application (Duration: 37.7ms | Allocations: 24119)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 48.4ms | Allocations: 32736)
+Completed 200 OK in 53ms (Views: 45.5ms | ActiveRecord: 3.8ms | Allocations: 34388)
+
+
+Started GET "/cars/11" for ::1 at 2023-03-12 17:09:43 +0000
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cars/show.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:69
+  [1m[36mCar Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars" WHERE "cars"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/cars/show.html.erb:80
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_car_show_sticky_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered cars/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3655)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 12217)
+Completed 200 OK in 22ms (Views: 14.5ms | ActiveRecord: 3.0ms | Allocations: 14357)
+
+
+Started GET "/cars/11" for ::1 at 2023-03-12 17:10:09 +0000
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (4.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cars/show.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:69
+  [1m[36mCar Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars" WHERE "cars"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/cars/show.html.erb:80
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_car_show_sticky_footer.html.erb (Duration: 0.4ms | Allocations: 111)
+  Rendered cars/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 3655)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 12213)
+Completed 200 OK in 36ms (Views: 18.9ms | ActiveRecord: 6.4ms | Allocations: 14362)
+
+
+Started GET "/cars/11" for ::1 at 2023-03-12 17:10:11 +0000
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (3.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cars/show.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mActiveStorage::Attachment Load (6.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (2.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:69
+  [1m[36mCar Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars" WHERE "cars"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/cars/show.html.erb:80
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_car_show_sticky_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered cars/show.html.erb within layouts/application (Duration: 20.7ms | Allocations: 3655)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 12213)
+Completed 200 OK in 43ms (Views: 24.4ms | ActiveRecord: 13.0ms | Allocations: 14366)
+
+
+Started GET "/cars/11" for ::1 at 2023-03-12 17:10:13 +0000
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cars/show.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:69
+  [1m[36mCar Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars" WHERE "cars"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/cars/show.html.erb:80
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_car_show_sticky_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered cars/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 3655)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 12213)
+Completed 200 OK in 22ms (Views: 13.2ms | ActiveRecord: 4.9ms | Allocations: 14347)
+
+
+Started GET "/cars/11" for ::1 at 2023-03-12 17:10:15 +0000
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cars/show.html.erb within layouts/application
+  Rendered components_mobile/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Car"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/show.html.erb:69
+  [1m[36mCar Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars" WHERE "cars"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/cars/show.html.erb:80
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_social_media_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered components_mobile/_car_show_sticky_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered cars/show.html.erb within layouts/application (Duration: 10.9ms | Allocations: 3655)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 12213)
+Completed 200 OK in 24ms (Views: 18.1ms | ActiveRecord: 2.5ms | Allocations: 14368)
+
+
