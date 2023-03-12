@@ -16,14 +16,32 @@ class ValidationsController < ApplicationController
     else
       @emergency_contact = current_user.emergency_contact
     end
+
+    if current_user.foreign_id.nil?
+      @foreign_id = ForeignId.new
+    else
+      @foreign_id = current_user.foreign_id
+    end
+
+    if current_user.mexican_id.nil?
+      @mexican_id = MexicanId.new
+    else
+      @mexican_id = current_user.mexican_id
+    end
   end
 
   def update_user_info
     @user = current_user
-    @user.update(user_params)
-    respond_to do |format|
-      format.html
-      format.text { render partial: "blocks/name_block_validation", locals: {user: @user}, formats: [:html] }
+    if @user.update(user_params)
+      respond_to do |format|
+        format.html
+        format.text { render partial: "blocks/name_block_validation", locals: {user: @user}, formats: [:html] }
+      end
+    else
+      respond_to do |format|
+        format.html
+        format.text { render partial: "mobile_forms/name_validation_form", status: :unprocessable_entity, locals: {user: current_user}, formats: [:html] }
+      end
     end
   end
 
@@ -33,11 +51,17 @@ class ValidationsController < ApplicationController
       address.user = current_user
       address.save
     end
-    current_user.address.update(address_params)
+    if current_user.address.update(address_params)
     respond_to do |format|
       format.html
       format.text { render partial: "blocks/address_validation", locals: {user: current_user}, formats: [:html] }
     end
+    else
+      respond_to do |format|
+        format.html
+        format.text { render partial: "mobile_forms/address_form", status: :unprocessable_entity, locals: {address: current_user.address}, formats: [:html] }
+    end
+  end
   end
 
   def update_emergency_contact
@@ -46,10 +70,16 @@ class ValidationsController < ApplicationController
       emergency_contact.user = current_user
       emergency_contact.save
     end
-    current_user.emergency_contact.update(emergency_contact_params)
-    respond_to do |format|
-      format.html
-      format.text { render partial: "blocks/emergency_validation", locals: {user: current_user}, formats: [:html] }
+    if current_user.emergency_contact.update(emergency_contact_params)
+      respond_to do |format|
+        format.html
+        format.text { render partial: "blocks/emergency_validation", locals: {user: current_user}, formats: [:html] }
+      end
+    else
+      respond_to do |format|
+        format.html
+        format.text { render partial: "mobile_forms/emergency_contact_form", locals: {emergency_contact: current_user.emergency_contact}, formats: [:html] }
+      end
     end
   end
 
@@ -71,6 +101,20 @@ class ValidationsController < ApplicationController
     respond_to do |format|
       format.html
       format.text { render partial: "mobile_forms/emergency_contact_form", locals: {emergency_contact: current_user.emergency_contact}, formats: [:html] }
+    end
+  end
+
+  def get_id_form
+    if current_user.nationality == "México"
+      respond_to do |format|
+        format.html
+        format.text { render partial: "mobile_forms/id_form", formats: [:html] }
+      end
+    else
+      respond_to do |format|
+        format.html
+        format.text { render partial: "mobile_forms/id_nonmexican_form", formats: [:html] }
+      end
     end
   end
 

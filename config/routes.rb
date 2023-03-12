@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get "validations/get_name_validation_form", to: "validations#get_validations_name_form"
   get "validations/get_address_validation_form", to: "validations#get_validations_address_form"
   get "validations/get_emergency_contact_form", to: "validations#get_validations_emergency_contact"
+  get "validations/get_id_form", to: "validations#get_id_form"
 end

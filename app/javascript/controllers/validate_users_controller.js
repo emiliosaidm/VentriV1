@@ -22,11 +22,12 @@ export default class extends Controller {
       headers: { "Accept": "text/plain" },
       body: new FormData(this.nameFormTarget)
     })
-      .then(response => response.text())
-      .then((data) => {
-        this.nameTarget.innerHTML = data
-      })
+    .then(response => response.text())
+    .then((data) => {
+      this.nameTarget.innerHTML = data
       this.#show("address")
+      this.showIdValidationForm()
+      })
   }
 
   updateAddress(event){
@@ -40,8 +41,8 @@ export default class extends Controller {
       .then(response => response.text())
       .then((data) => {
         this.addressTarget.innerHTML = data
+        this.#show("emergencyContact")
       })
-      this.#show("emergencyContact")
   }
 
   updateEmergencyContact(event){
@@ -55,8 +56,8 @@ export default class extends Controller {
       .then(response => response.text())
       .then((data) => {
         this.emergencyContactTarget.innerHTML = data
+        this.#show("id")
       })
-      this.#show("id")
   }
 
   showNameValidationForm(){
@@ -92,6 +93,18 @@ export default class extends Controller {
       .then(response => response.text())
       .then((data) => {
         this.emergencyContactTarget.innerHTML = data
+      })
+  }
+
+  showIdValidationForm(){
+    const url = `get_id_form`
+    fetch(url,{
+      method: "GET",
+      headers: { "Accept": "text/plain" }
+    })
+      .then(response => response.text())
+      .then((data) => {
+        this.idTarget.innerHTML = data
       })
   }
 
