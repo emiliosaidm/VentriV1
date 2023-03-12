@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_09_140917) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_11_212740) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -44,13 +44,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_140917) do
 
   create_table "addresses", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.string "street"
-    t.string "state"
-    t.string "city"
-    t.string "zip_code"
-    t.string "country"
-    t.string "neighborhood"
-    t.string "exterior_number"
+    t.string "street", default: ""
+    t.string "state", default: ""
+    t.string "city", default: ""
+    t.string "zip_code", default: ""
+    t.string "country", default: ""
+    t.string "neighborhood", default: ""
+    t.string "exterior_number", default: ""
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_addresses_on_user_id"
@@ -99,14 +99,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_140917) do
   end
 
   create_table "emergency_contacts", force: :cascade do |t|
-    t.string "name"
-    t.string "last_name"
-    t.string "phone_number"
-    t.string "relationship"
+    t.string "first_name", default: ""
+    t.string "last_name", default: ""
+    t.string "phone_number", default: ""
+    t.string "relationship", default: ""
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_emergency_contacts_on_user_id"
+  end
+
+  create_table "foreign_ids", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_foreign_ids_on_user_id"
   end
 
   create_table "location_addresses", force: :cascade do |t|
@@ -118,6 +125,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_140917) do
     t.string "neighborhood"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "mexican_ids", force: :cascade do |t|
+    t.string "type"
+    t.bigint "users_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["users_id"], name: "index_mexican_ids_on_users_id"
   end
 
   create_table "pick_up_locations", force: :cascade do |t|
@@ -164,9 +179,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_140917) do
     t.string "email", default: "", null: false
     t.string "first_name", default: "", null: false
     t.string "last_names", default: "", null: false
-    t.string "phone_number"
-    t.date "date_of_birth"
-    t.string "gender"
+    t.string "nationality", default: "México"
+    t.string "phone_number", default: "+52"
+    t.date "date_of_birth", default: "2023-03-12"
+    t.string "gender", default: "Mujer"
     t.integer "driver_verified", default: 0, null: false
     t.integer "host_verified", default: 0, null: false
     t.string "encrypted_password", default: "", null: false
@@ -188,6 +204,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_140917) do
   add_foreign_key "car_reviews", "users"
   add_foreign_key "cars", "users"
   add_foreign_key "emergency_contacts", "users"
+  add_foreign_key "foreign_ids", "users"
+  add_foreign_key "mexican_ids", "users", column: "users_id"
   add_foreign_key "pick_up_locations", "location_addresses"
   add_foreign_key "rental_drivers", "rentals"
   add_foreign_key "rental_drivers", "users"
