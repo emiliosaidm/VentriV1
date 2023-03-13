@@ -1,8 +1,10 @@
-<div class = "show-on-mobile-login" style=>
+<div class = "show-on-mobile-login">
   <%= render "components_mobile/navbar" %>
   <div class="card-holder">
     <%@cars.each_with_index  do |car, index|%>
-      <%=render "components_mobile/car_card", :car => car %>
+      <%= link_to car_path(car), style: "text-decoration: none; color: black;" do%>
+        <%=render "components_mobile/car_card", :car => car %>
+      <%end%>
     <%end%>
   </div>
   <%= render "components_mobile/sticky_footer" %>

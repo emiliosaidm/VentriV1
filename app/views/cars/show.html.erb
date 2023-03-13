@@ -1,2 +1,174 @@
-<h1>Cars#show</h1>
-<p>Find me in app/views/cars/show.html.erb</p>
+<div class = "show-on-mobile-login">
+  <%= render "components_mobile/navbar" %>
+  <div class="show-container" style="overflow: hidden">
+    <% if @car.photo.attached?%>
+      <%= cl_image_tag @car.photo.key, width: 425, height: 325, crop: :fill, style:"border-radius: 0px 0px 0px 0px; " %>
+    <% else %>
+      <img src="https://www.fintelgaseluce.it/wp-content/uploads/2015/07/FEG-facebook-placeholder_shop.png" style="height: 325px; width: 425px; border-radius: 0px 0px 0px 0px"/>
+    <% end %>
+    <div class="top-left">
+      <%=link_to cars_path, style: "text-decoration: none; color: black;" do%>
+        <i class="fa-solid fa-chevron-left fa-xl"></i>
+      <%end%>
+    </div>
+  </div>
+  <div>
+    <h1 class="show_heading"><%= @car.make%> <%= @car.model%>, <%= @car.year%></h1>
+    <div style="display: flex; align-items: center; margin-top: -10px;">
+      <h3 style="margin-left: 15px;"><i class="fa-solid fa-star fa-sm"></i> 5.0</h3>
+      <p id="star-count" style="font-family: 'Nunito';font-style: normal; font-size: 21px; margin-left: 10px; margin-top:5px">(20 viajes)</p>
+      <i class="fa-solid fa-circle fa-2xs" style="margin-top:-14px; margin-left: 5px;"></i>
+     <p style="font-family: 'Nunito'; font-style: normal; font-weight: 700;font-size: 21px; margin-left: 5px; margin-top:5px">18 comentarios</p>
+    </div>
+  </div>
+
+  <div width="100vw" style="display: flex; justify-content:center">
+    <hr style="width: 85vw; background-color:black;">
+  </div>
+
+  <div>
+    <h3 style="margin-left: 15px; margin-bottom: 20px;">Especificaciones</h3>
+
+    <div style="display: flex; justify-content: space-evenly; margin-left: -20px;">
+      <div>
+        <div style="display: flex">
+          <%if @car.engine == "Electrico"%>
+            <i class="fa-solid fa-bolt fa-xl"></i>
+          <% else %>
+            <i class="fa-solid fa-oil-can fa-xl"></i>
+          <% end %>
+           <p style="margin-top: -10px; margin-left: 4px; font-family: 'Nunito';font-style: normal; font-size: 21px;"><%=@car.engine%></p>
+        </div>
+        <div style="display: flex;">
+          <i class="fa-solid fa-door-open fa-xl"></i>
+          <p style="margin-top: -10px; margin-left: 4px; font-family: 'Nunito';font-style: normal; font-size: 21px;"><%= @car.doors%> Puertas</p>
+        </div>
+        <div style="display: flex">
+          <i class="fa-solid fa-chair fa-xl"></i>
+          <p style="margin-top: -10px; margin-left: 4px; font-family: 'Nunito';font-style: normal; font-size: 21px;"><%= @car.seats.to_s%> Asientos</p>
+        </div>
+      </div>
+
+      <div style="">
+        <div style="display: flex">
+          <i class="fa-solid fa-sitemap fa-xl"></i>
+          <p style="margin-top: -10px; margin-left: 4px;  font-family: 'Nunito';font-style: normal; font-size: 21px;"><%= @car.transmission%> </p>
+        </div>
+        <div style="display: flex">
+          <i class="fa-solid fa-tag fa-xl"></i>
+          <p style="margin-top: -10px; margin-left: 4px;  font-family: 'Nunito';font-style: normal; font-size: 21px;"><%= @car.price%>mx</p>
+        </div>
+      </div>
+    </div>
+
+    <div width="100vw" style="display: flex; justify-content:center">
+      <hr style="width: 85vw; background-color:black;">
+    </div>
+
+    <div>
+      <h3 style="margin-left: 15px; margin-bottom: 20px; display: flex;">Anfitrión: <%=@car.owner.first_name%> <%=@car.owner.last_names%></h3>
+      <div style="display: flex;">
+        <img style="height: 66px; width: 66px; border-radius:50%; margin-right: 10px; margin-top:; margin-left: 15px; border:1px solid white; box-shadow: 0 1px 2px rgba(0,0,0,0.2);" src="https://pcafalcons.com/wp-content/uploads/2019/08/no-profile-picture-icon-female-0-e1564976045606.jpg" alt="">
+        <div>
+          <div style="display: flex; align-items: center; margin-top: -10px; margin-bottom: -15px;">
+            <h3 style="font-family: 'Nunito'; font-style: normal; font-size: 15px !important; margin-left: 10px; margin-top:5px"><i class="fa-solid fa-star fa-sm"></i> 5.0</h3>
+            <p style="font-family: 'Nunito'; font-style: normal; font-size: 15px; margin-left: 5px; margin-top:10px">(20 viajes)</p>
+            <i class="fa-solid fa-circle" style="margin-top:-14px; margin-left: 5px; font-size: 5px;"></i>
+            <p style="font-family: 'Nunito'; font-style: normal; font-weight: 700;font-size: 15px; margin-left: 5px; margin-top:10px">18 comentarios</p>
+          </div>
+          <div style="margin-bottom: -15px;">
+            <p style="font-family: 'Nunito'; font-style: normal; font-size: 15px; margin-left: 10px;"><i class="fa-solid fa-car"></i><strong> <%= @car.owner.cars.count%></strong> Vehículos</p>
+          </div>
+           <div>
+            <p style="font-family: 'Nunito'; font-style: normal; font-size: 15px; margin-left: 10px;"><i class="fa-solid fa-medal"></i> Grada 1 Anfitrión</p>
+          </div>
+        </div>
+      <div>
+
+        </div>
+      </div>
+    </div>
+
+    <div width="100vw" style="display: flex; justify-content:center">
+      <hr style="width: 85vw; background-color:black;">
+    </div>
+
+    <div>
+      <h3 style="margin-left: 15px;">Descripción</h3>
+      <p style="font-family: 'Nunito'; font-style: normal; font-size: 16px; margin-left: 15px;  margin-right: 5px;"><%=@car.description%></p>
+    </div>
+
+    <div width="100vw" style="display: flex; justify-content:center">
+      <hr style="width: 85vw; background-color:black;">
+    </div>
+
+    <div>
+      <h3 style="margin-left: 15px;">Seguro</h3>
+      <p style="font-family: 'Nunito'; font-style: normal; font-size: 16px; margin-left: 15px; margin-right: 5px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
+    </div>
+
+    <div width="100vw" style="display: flex; justify-content:center">
+      <hr style="width: 85vw; background-color:black;">
+    </div>
+
+    <div>
+      <h3 style="margin-left: 15px;">Política de cancelación</h3>
+      <p style="font-family: 'Nunito'; font-style: normal; font-size: 16px; margin-left: 15px; margin-right: 5px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
+    </div>
+
+    <div width="100vw" style="display: flex; justify-content:center">
+      <hr style="width: 85vw; background-color:black;">
+    </div>
+
+    <div>
+      <h3 style="margin-left: 15px;">Compartir</h3>
+      <%=render "components_mobile/social_media_footer"%>
+    </div>
+
+    <div width="100vw" style="display: flex; justify-content:center">
+      <hr style="width: 85vw; background-color:black;">
+    </div>
+
+
+    <div style="display: flex; justify-content: center;">
+      <a href="#" style="color: black; text-decoration: underline; font-style: normal; font-size: 18px;"><i class="fa-solid fa-flag"></i> <strong>Reportar este anuncio</strong></a>
+    </div>
+
+    <div width="100vw" style="display: flex; justify-content:center">
+      <hr style="width: 85vw; background-color:black;">
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-bottom: 3px">
+      <a href="#" style="color: black; text-decoration: underline; font-style: normal; font-size: 18px;"> <strong>Apoyo</strong></a>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-bottom: 3px">
+      <a href="#" style="color: black; text-decoration: underline; font-style: normal; font-size: 18px;"> <strong>Sé anfitrión</strong></a>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-bottom: 3px">
+      <a href="#" style="color: black; text-decoration: underline; font-style: normal; font-size: 18px;"> <strong>Sobre Ventri</strong></a>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-bottom: 3px">
+      <a href="#" style="color: black; text-decoration: underline; font-style: normal; font-size: 18px;"> <strong>Únete a la comunidad</strong></a>
+    </div>
+
+    <div width="100vw" style="display: flex; justify-content:center">
+      <hr style="width: 85vw; background-color:black;">
+    </div>
+
+    <div style="padding-bottom: 10px;">
+      <h3 style="margin-left: 15px;">Seguir</h3>
+      <%=render "components_mobile/social_media_footer"%>
+    </div>
+
+    <%=render "components_mobile/car_show_sticky_footer"%>
+
+
+
+
+
+
+  </div>
+</div>
