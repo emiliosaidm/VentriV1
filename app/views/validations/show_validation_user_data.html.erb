@@ -16,7 +16,7 @@
         <tr>
           <td class="p-3">
               <h5><b>Nombre y Apellidos</b></h5>
-              <%= render partial: "mobile_forms/name_validation_form", locals: {user: @user} %>
+              <%= render partial: "mobile_forms/name_validation_form", locals: {user: current_user} %>
           </td>
         </tr>
         <tr>
@@ -36,9 +36,9 @@
           <td class="p-3">
             <h5><b>Pasaporte o INE</b></h5>
             <% if current_user.nationality == "México" %>
-              <%= render partial: "mobile_forms/id_form" %>
+              <%= render partial: "mobile_forms/id_form", locals: {current_user: current_user, options: @options} %>
             <% else %>
-              <%= render partial: "mobile_forms/id_nonmexican_form" %>
+              <%= render partial: "mobile_forms/id_nonmexican_form", locals: {current_user: current_user} %>
             <% end %>
           </td>
         </tr>

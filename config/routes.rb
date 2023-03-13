@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   patch "validations/update/user", to: "validations#update_user_info", as: "update_user_info"
   patch "validations/update/address", to: "validations#update_address"
   patch "validations/update/emergency_contact", to: "validations#update_emergency_contact"
+  patch "validations/update/update_id", to: "validations#update_id"
+  patch "validations/update/update_id_nonmexican", to: "validations#update_id_nonmexican"
   get "validations/get_name_validation_form", to: "validations#get_validations_name_form"
   get "validations/get_address_validation_form", to: "validations#get_validations_address_form"
   get "validations/get_emergency_contact_form", to: "validations#get_validations_emergency_contact"

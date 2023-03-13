@@ -1,0 +1,16 @@
+ <div class="alert alert-secondary" data-validate-users-target="reviewId" role="alert">
+  <p>
+    <i class="fa-solid fa-check"></i><b> Tipo de identificación:</b> <%= user.mexican_identification.type_of_id %>
+  </p>
+  <p>
+    <i class="fa-solid fa-check"></i><b> Primera foto:</b>
+  </p>
+  <%= cl_image_tag current_user.mexican_identification.photos.first.key, height: 200, width: 300, style: "border-radius: 5px", class: "m-1" %>
+  <p>
+    <i class="fa-solid fa-check"></i><b> Segunda foto:</b>
+  </p>
+  <%= cl_image_tag current_user.mexican_identification.photos.second.key, height: 200, width: 300, style: "border-radius: 5px", class: "m-1"%>
+  <div class="d-flex fl ex-column justify-content-center align-items-center">
+    <a data-action= "click->validate-users#showAddressValidationForm">Editar <i class="fa-solid fa-pencil"></i></a>
+  </div>
+</div>

@@ -7,7 +7,8 @@ export default class extends Controller {
     this.#hide("all")
   }
   static targets = ["address", "name", "emergencyContact", "id", "licence", "profile", "startButton",
-                    "nameForm", "reviewName", "addressForm", "reviewAddress", "emergencyContactForm"]
+                    "nameForm", "reviewName", "addressForm", "reviewAddress", "emergencyContactForm",
+                    "idNonmexicanForm", "idForm" ]
 
   startValidation(){
     this.#show("name")
@@ -58,6 +59,37 @@ export default class extends Controller {
         this.emergencyContactTarget.innerHTML = data
         this.#show("id")
       })
+  }
+
+  updateIdNonmexican(event){
+    event.preventDefault()
+    const url = `update/update_id_nonmexican`
+    fetch(url, {
+      method: "PATCH",
+      headers: { "Accept": "text/plain" },
+      body: new FormData(this.idNonmexicanFormTarget)
+    })
+      .then(response => response.text())
+      .then((data) => {
+        this.idTarget.innerHTML = data
+        this.#show("licence")
+      })
+  }
+
+  updateIdMexican(event){
+    event.preventDefault()
+    const url = `update/update_id`
+    fetch(url, {
+      method: "PATCH",
+      headers: { "Accept": "text/plain" },
+      body: new FormData(this.idFormTarget)
+    })
+      .then(response => response.text())
+      .then((data) => {
+        this.idTarget.innerHTML = data
+        this.#show("licence")
+      })
+
   }
 
   showNameValidationForm(){
@@ -183,4 +215,5 @@ export default class extends Controller {
       }
     }
   }
+
 }
