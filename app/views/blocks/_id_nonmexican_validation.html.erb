@@ -1,0 +1,9 @@
+ <div class="alert alert-secondary" data-validate-users-target="reviewIdNonmexican" role="alert">
+  <p>
+   <b> Foto del pasaporte</b>
+  </p>
+  <%= cl_image_tag current_user.foreign_identification.photo.key %>
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <a data-action= "click->validate-users#showAddressValidationForm">Editar <i class="fa-solid fa-pencil"></i></a>
+  </div>
+</div>

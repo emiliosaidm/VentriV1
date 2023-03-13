@@ -1,13 +1,15 @@
- <div data-validate-users-target="id">
-  <div class="alert alert-warning" role="alert">
-    <h5 class="alert-heading"><b>Adjunta una foto de tu pasaporte</b></h5>
-    <p>
-      Como no eres Ciudadano Mexicano debes de presentar una foto de tu pasaporte.
-      Además, tu licencia de conducir debe de tener tu domicilio.
-    </p>
-  </div>
-  <div class="d-flex flex-column justify-content-center align-items-center">
-    <input class="form-control mb-2" type="file" id="licence" multiple />
-    <button class= "btn btn-main-dark w-50">Siguiente</button>
-  </div>
+<div data-validate-users-target="id">
+  <%= simple_form_for(current_user.foreign_identification, url: "", data: {validate_users_target:"idNonmexicanForm", action: "submit->validate-users#idNonmexican"}, method: :patch) do |f| %>
+    <div class="alert alert-warning" role="alert">
+      <h5 class="alert-heading"><b>Adjunta una foto de tu pasaporte</b></h5>
+      <p>
+        Como no eres Ciudadano Mexicano debes de presentar una foto de tu pasaporte.
+        Además, tu licencia de conducir debe de tener tu domicilio.
+      </p>
+    </div>
+    <%= f.input :avatar, as: :file, label:"Foto del pasaporte", hint: "Si la foto no es clara será rechazada y vuelta a pedir."%>
+    <div class="form-actions d-flex w-100 flex-column align-items-center">
+      <%= f.button :submit, "Siguiente", class: "btn btn-main-dark w-50" %>
+    </div>
+  <% end %>
 </div>
